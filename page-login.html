@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="msapplication-TileColor" content="#0E0E0E">
+  <meta name="template-color" content="#0E0E0E">
+  <meta name="description" content="Index page">
+  <meta name="keywords" content="index, page">
+  <meta name="author" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/template/favicon.svg">
+  <link href="assets/css/style.css?v=3.0.0" rel="stylesheet">
+  <title>Login - ibest</title>
+</head>
+
+<body>
+  <div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+      <div class="preloader-inner position-relative">
+        <div class="text-center"><img class="mb-10" src="assets/imgs/template/favicon.svg" alt="ibest">
+          <div class="preloader-dots"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topbar top-brand-2">
+    <div class="container-topbar">
+      <div class="menu-topbar-left d-none d-xl-block">
+        <ul class="nav-small">
+          <li><a class="font-xs" href="page-about-us.html">About Us</a></li>
+          <li><a class="font-xs" href="page-contact.html">Contact</a></li>
+          <li><a class="font-xs" href="page-term-condition.html">Term and Condition</a></li>
+        </ul>
+      </div>
+      <div class="info-topbar text-center d-none d-xl-block"><span class="font-xs color-brand-3">Free shipping for all
+          orders over</span><span class="font-sm-bold color-success"> R 750.00</span></div>
+      <div class="menu-topbar-right"><!--<span class="font-xs color-brand-3">Need help? Call Us:</span><span
+          class="font-sm-bold color-success"> + 1800 900 </span>-->
+        <div class="dropdown dropdown-language">
+          <button class="btn dropdown-toggle" id="dropdownPage" type="button" data-bs-toggle="dropdown"
+            aria-expanded="true" data-bs-display="static"><span class=" font-xs color-brand-3"><img
+                src="assets/imgs/template/en.svg" alt="ibest"> English </span></button>
+          <!--<ul class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownPage" data-bs-popper="static">
+            <li><a class="dropdown-item" href="#"><img src="assets/imgs/template/flag-en.svg" alt="ibest"> English</a>
+            </li>
+            <li><a class="dropdown-item" href="#"><img src="assets/imgs/template/flag-fr.svg" alt="ibest"> Français</a>
+            </li>
+            <li><a class="dropdown-item" href="#"><img src="assets/imgs/template/flag-es.svg" alt="ibest"> Español</a>
+            </li>
+            <li><a class="dropdown-item" href="#"><img src="assets/imgs/template/flag-pt.svg" alt="ibest"> Português</a>
+            </li>
+            <li><a class="dropdown-item" href="#"><img src="assets/imgs/template/flag-cn.svg" alt="ibest"> 中国人</a></li>
+          </ul>-->
+        </div>
+        <div class="dropdown dropdown-language">
+          <!--<button class="btn dropdown-toggle" id="dropdownPage2" type="button" data-bs-toggle="dropdown"
+            aria-expanded="true" data-bs-display="static"><span
+              class="font-xs color-brand-3"> RAND </span></button>-->
+          <!--<ul class="dropdown-menu dropdown-menu-light dropdown-menu-end" aria-labelledby="dropdownPage2"
+            data-bs-popper="static">
+            <li><a class="dropdown-item active" href="#">Rand</a></li>
+            <li><a class="dropdown-item" href="#">EUR</a></li>
+            <li><a class="dropdown-item" href="#">AUD</a></li>
+            <li><a class="dropdown-item" href="#">SGP</a></li>
+          </ul>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <header class="header header-container sticky-bar">
+    <div class="container">
+      <div class="main-header">
+        <div class="header-left">
+          <div class="header-logo"><a href="index.html"><img alt="ibest" src="assets/imgs/template/logo.svg"
+               ></a></div>
+          <div class="header-search">
+            <div class="box-header-search">
+              <div class="form-search">
+                <div class="box-category">
+                  <select class="select-active select2-hidden-accessible" data-select2-id="1" tabindex="-1"
+                    aria-hidden="true">
+                    <option value="All">All categories</option>
+                    <!--All categories will show here-->
+                  </select>
+                </div>
+                <div class="box-keysearch">
+                  <input class="form-control font-xs" type="text" value="" placeholder="Search for items">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-nav text-start">
+            <!--<nav class="nav-main-menu d-none d-xl-block">
+              <ul class="main-menu">
+                <li><a class="active" href="#">Flash Deals</a></li>
+                <li><a href="#">Special</a></li>
+                <li><a href="#">Top Sellers</a></li>
+              </ul>
+            </nav>-->
+          </div>
+          <div class="header-shop">
+            <div class="d-inline-block box-dropdown-cart"><span class="font-lg icon-list icon-account"
+                id="accountIcon"><span>Account</span></span>
+              <div class="dropdown-account">
+                <ul>
+                  <li><a href="page-account.html">My Account</a></li>
+                  <li><a href="page-login.html">My Orders</a></li>
+                  <li><a href="page-login.html">My Wishlist</a></li>
+                  <li><a href="page-login.html">Setting</a></li>
+                  <li><a href="#" onclick="signOutUser()">Sign out</a></li>
+                </ul>
+              </div>
+            </div><a class="font-lg icon-list icon-wishlist" id="wishlistIcon"><span>Wishlist</span><span
+                class="number-item font-xs" id="wishlistCount">0</span></a>
+            <a class="d-inline-block box-dropdown-cart" id="cartIcon">
+              <span class="font-lg icon-list icon-cart">
+                <span>Cart</span>
+                <span class="number-item font-xs" id="cartCount">0</span>
+              </span>
+            </a>
+            <!--<div class="dropdown-cart">
+                <div class="item-cart mb-20">
+                  <div class="cart-image"><img src="assets/imgs/page/homepage1/imgsp4.png" alt="ibest"></div>
+                  <div class="cart-info"><a class="font-sm-bold color-brand-3" href="shop-single-product-2.html">2024
+                      Apple iMac with Retina 5K Display 8GB RAM, 256GB SSD</a>
+                    <p><span class="color-brand-2 font-sm-bold">1 x $2856.4</span></p>
+                  </div>
+                </div>
+                
+              </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+        <div class="dropdown d-inline-block">
+          <button class="btn dropdown-toggle btn-category" id="dropdownCategory" type="button" data-bs-toggle="dropdown"
+            aria-expanded="true" data-bs-display="static"><span class="dropdown-right font-sm-bold color-white">Shop By
+              Categories</span></button>
+          <div class="sidebar-left dropdown-menu dropdown-menu-light" aria-labelledby="dropdownCategory"
+            data-bs-popper="static">
+            <ul class="menu-texts menu-close">
+              <!--Catgories and Sub-categories will show here-->
+            </ul>
+          </div>
+        </div>
+        <div class="header-nav d-inline-block">
+          <nav class="nav-main-menu d-none d-xl-block">
+            <ul class="main-menu">
+              <li><a class="active" href="index.html">Home</a></li>
+
+
+              <li> <a href="shop-grid.html">New Arrivals</a></li>
+              <!--<ul class="sub-menu two-col">
+                  <li><a href="shop-grid.html">Shop Grid</a></li>
+                  <li><a href="shop-grid-2.html">Shop Grid 2</a></li>
+                  <li><a href="shop-list.html">Shop list - Left sidebar</a></li>
+                  <li><a href="shop-list-2.html">Shop list - Right sidebar</a></li>
+                  <li><a href="shop-fullwidth.html">Shop Fullwidth</a></li>
+                  <li><a href="shop-single-product.html">Single Product</a></li>
+                  <li><a href="shop-single-product-2.html">Single Product 2</a></li>
+                  <li><a href="shop-single-product-3.html">Single Product 3</a></li>
+                  <li><a href="shop-single-product-4.html">Single Product 4</a></li>
+                  <li><a href="shop-cart.html">Shop Cart</a></li>
+                  <li><a href="shop-checkout.html">Shop Checkout</a></li>
+                  <li><a href="shop-compare.html">Shop Compare</a></li>
+                  <li><a href="shop-wishlist.html">Shop Wishlist</a></li>
+                </ul>-->
+              </li>
+
+
+              </li>
+              <li><a href="page-contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <!--<div class="mobile-header-active mobile-header-wrapper-style perfect-scrollbar">
+    <div class="mobile-header-wrapper-inner">
+      <div class="mobile-header-content-area">
+        <div class="mobile-logo"><a class="d-flex" href="index.html"><img alt="ibest"
+              src="assets/imgs/template/logo.svg"></a></div>
+        <div class="perfect-scroll">
+          <div class="mobile-menu-wrap mobile-header-border">
+            <nav class="mt-15">
+              <ul class="mobile-menu font-heading">
+                <li class="has-children"><a class="active" href="index.html">Home</a>
+                  <ul class="sub-menu">
+                    <li><a href="index.html">Homepage - 1</a></li>
+                    <li><a href="index-2.html">Homepage - 2</a></li>
+                    <li><a href="index-3.html">Homepage - 3</a></li>
+                    <li><a href="index-4.html">Homepage - 4</a></li>
+                    <li><a href="index-5.html">Homepage - 5</a></li>
+                    <li><a href="index-6.html">Homepage - 6</a></li>
+                    <li><a href="index-7.html">Homepage - 7</a></li>
+                    <li><a href="index-8.html">Homepage - 8</a></li>
+                    <li><a href="index-9.html">Homepage - 9</a></li>
+                    <li><a href="index-10.html">Homepage - 10</a></li>
+                  </ul>
+                </li>
+                <li class="has-children"><a href="shop-grid.html">Shop</a>
+                  <ul class="sub-menu">
+                    <li><a href="shop-grid.html">Shop Grid</a></li>
+                    <li><a href="shop-grid-2.html">Shop Grid 2</a></li>
+                    <li><a href="shop-list.html">Shop List</a></li>
+                    <li><a href="shop-list-2.html">Shop List 2</a></li>
+                    <li><a href="shop-fullwidth.html">Shop Fullwidth</a></li>
+                    <li><a href="shop-single-product.html">Single Product</a></li>
+                    <li><a href="shop-single-product-2.html">Single Product 2</a></li>
+                    <li><a href="shop-single-product-3.html">Single Product 3</a></li>
+                    <li><a href="shop-single-product-4.html">Single Product 4</a></li>
+                    <li><a href="shop-cart.html">Shop Cart</a></li>
+                    <li><a href="shop-checkout.html">Shop Checkout</a></li>
+                    <li><a href="shop-compare.html">Shop Compare</a></li>
+                    <li><a href="shop-wishlist.html">Shop Wishlist</a></li>
+                  </ul>
+                </li>
+                <li class="has-children"><a href="shop-vendor-list.html">Vendors</a>
+                  <ul class="sub-menu">
+                    <li><a href="shop-vendor-list.html">Vendors Listing</a></li>
+                    <li><a href="shop-vendor-single.html">Vendor Single</a></li>
+                  </ul>
+                </li>
+                <li class="has-children"><a href="#">Pages</a>
+                  <ul class="sub-menu">
+                    <li><a href="page-about-us.html">About Us</a></li>
+                    <li><a href="page-contact.html">Contact Us</a></li>
+                    <li><a href="page-careers.html">Careers</a></li>
+                    <li><a href="page-term.html">Term and Condition</a></li>
+                    <li><a href="page-register.html">Register</a></li>
+                    <li><a href="page-login.html">Login</a></li>
+                    <li><a href="page-404.html">Error 404</a></li>
+                  </ul>
+                </li>
+                <li class="has-children"><a href="blog.html">Blog</a>
+                  <ul class="sub-menu">
+                    <li><a href="blog.html">Blog Grid</a></li>
+                    <li><a href="blog-2.html">Blog Grid 2</a></li>
+                    <li><a href="blog-list.html">Blog List</a></li>
+                    <li><a href="blog-big.html">Blog Big</a></li>
+                    <li><a href="blog-single.html">Blog Single - Left sidebar</a></li>
+                    <li><a href="blog-single-2.html">Blog Single - Right sidebar</a></li>
+                    <li><a href="blog-single-3.html">Blog Single - No sidebar</a></li>
+                  </ul>
+                </li>
+                <li><a href="page-contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mobile-account">
+            <div class="mobile-header-top">
+              <div class="user-account"><a href="page-account.html"><img src="assets/imgs/template/ava_1.png"
+                    alt="ibest"></a>
+                <div class="content">
+                  <h6 class="user-name">Hello<span class="text-brand"> Steven !</span></h6>
+                  <p class="font-xs text-muted">You have 3 new messages</p>
+                </div>
+              </div>
+            </div>
+            <ul class="mobile-menu">
+              <li><a href="page-account.html">My Account</a></li>
+              <li><a href="page-account.html">Order Tracking</a></li>
+              <li><a href="page-account.html">My Orders</a></li>
+              <li><a href="page-account.html">My Wishlist</a></li>
+              <li><a href="page-account.html">Setting</a></li>
+              <li><a href="page-login.html">Sign out</a></li>
+            </ul>
+          </div>
+          <div class="mobile-banner">
+            <div class="bg-5 block-iphone"><span class="color-brand-3 font-sm-lh32">Starting from $899</span>
+              <h3 class="font-xl mb-10">iPhone 12 Pro 128Gb</h3>
+              <p class="font-base color-brand-3 mb-10">Special Sale</p><a class="btn btn-arrow"
+                href="shop-grid.html">learn more</a>
+            </div>
+          </div>
+          <div class="site-copyright color-gray-400 mt-30">Copyright 2024 &copy; ibest - Marketplace
+            Template.<br>Designed by<a href="http://alithemes.com" target="_blank">&nbsp; AliThemes</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-header-active mobile-header-wrapper-style perfect-scrollbar">
+    <div class="mobile-header-wrapper-inner">
+      <div class="mobile-header-content-area">
+        <div class="mobile-logo"><a class="d-flex" href="index.html"><img alt="ibest"
+              src="assets/imgs/template/logo.svg"></a></div>
+        <div class="perfect-scroll">
+          <div class="mobile-menu-wrap mobile-header-border">
+            <nav class="mt-15">
+              <ul class="mobile-menu font-heading">
+                <li class="has-children"><a class="active" href="index.html">Home</a>
+                  <ul class="sub-menu">
+                    <li><a href="index.html">Homepage - 1</a></li>
+                    <li><a href="index-2.html">Homepage - 2</a></li>
+                    <li><a href="index-3.html">Homepage - 3</a></li>
+                    <li><a href="index-4.html">Homepage - 4</a></li>
+                    <li><a href="index-5.html">Homepage - 5</a></li>
+                    <li><a href="index-6.html">Homepage - 6</a></li>
+                    <li><a href="index-7.html">Homepage - 7</a></li>
+                    <li><a href="index-8.html">Homepage - 8</a></li>
+                    <li><a href="index-9.html">Homepage - 9</a></li>
+                    <li><a href="index-10.html">Homepage - 10</a></li>
+                  </ul>
+                </li>
+                <li class="has-children"><a href="shop-grid.html">Shop</a>
+                  <ul class="sub-menu">
+                    <li><a href="shop-grid.html">Shop Grid</a></li>
+                    <li><a href="shop-grid-2.html">Shop Grid 2</a></li>
+                    <li><a href="shop-list.html">Shop List</a></li>
+                    <li><a href="shop-list-2.html">Shop List 2</a></li>
+                    <li><a href="shop-fullwidth.html">Shop Fullwidth</a></li>
+                    <li><a href="shop-single-product.html">Single Product</a></li>
+                    <li><a href="shop-single-product-2.html">Single Product 2</a></li>
+                    <li><a href="shop-single-product-3.html">Single Product 3</a></li>
+                    <li><a href="shop-single-product-4.html">Single Product 4</a></li>
+                    <li><a href="shop-cart.html">Shop Cart</a></li>
+                    <li><a href="shop-checkout.html">Shop Checkout</a></li>
+                    <li><a href="shop-compare.html">Shop Compare</a></li>
+                    <li><a href="shop-wishlist.html">Shop Wishlist</a></li>
+                  </ul>
+                </li>
+                <li class="has-children"><a href="shop-vendor-list.html">Vendors</a>
+                  <ul class="sub-menu">
+                    <li><a href="shop-vendor-list.html">Vendors Listing</a></li>
+                    <li><a href="shop-vendor-single.html">Vendor Single</a></li>
+                  </ul>
+                </li>
+                <li class="has-children"><a href="#">Pages</a>
+                  <ul class="sub-menu">
+                    <li><a href="page-about-us.html">About Us</a></li>
+                    <li><a href="page-contact.html">Contact Us</a></li>
+                    <li><a href="page-careers.html">Careers</a></li>
+                    <li><a href="page-term.html">Term and Condition</a></li>
+                    <li><a href="page-register.html">Register</a></li>
+                    <li><a href="page-login.html">Login</a></li>
+                    <li><a href="page-404.html">Error 404</a></li>
+                  </ul>
+                </li>
+                <li class="has-children"><a href="blog.html">Blog</a>
+                  <ul class="sub-menu">
+                    <li><a href="blog.html">Blog Grid</a></li>
+                    <li><a href="blog-2.html">Blog Grid 2</a></li>
+                    <li><a href="blog-list.html">Blog List</a></li>
+                    <li><a href="blog-big.html">Blog Big</a></li>
+                    <li><a href="blog-single.html">Blog Single - Left sidebar</a></li>
+                    <li><a href="blog-single-2.html">Blog Single - Right sidebar</a></li>
+                    <li><a href="blog-single-3.html">Blog Single - No sidebar</a></li>
+                  </ul>
+                </li>
+                <li><a href="page-contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mobile-account">
+            <div class="mobile-header-top">
+              <div class="user-account"><a href="page-account.html"><img src="assets/imgs/template/ava_1.png"
+                    alt="ibest"></a>
+                <div class="content">
+                  <h6 class="user-name">Hello<span class="text-brand"> Steven !</span></h6>
+                  <p class="font-xs text-muted">You have 3 new messages</p>
+                </div>
+              </div>
+            </div>
+            <ul class="mobile-menu">
+              <li><a href="page-account.html">My Account</a></li>
+              <li><a href="page-account.html">Order Tracking</a></li>
+              <li><a href="page-account.html">My Orders</a></li>
+              <li><a href="page-account.html">My Wishlist</a></li>
+              <li><a href="page-account.html">Setting</a></li>
+              <li><a href="page-login.html">Sign out</a></li>
+            </ul>
+          </div>
+          <div class="mobile-banner">
+            <div class="bg-5 block-iphone"><span class="color-brand-3 font-sm-lh32">Starting from $899</span>
+              <h3 class="font-xl mb-10">iPhone 12 Pro 128Gb</h3>
+              <p class="font-base color-brand-3 mb-10">Special Sale</p><a class="btn btn-arrow"
+                href="shop-grid.html">learn more</a>
+            </div>
+          </div>
+          <div class="site-copyright color-gray-400 mt-30">Copyright 2024 &copy; ibest - Marketplace
+            Template.<br>Designed by<a href="http://alithemes.com" target="_blank">&nbsp; AliThemes</a></div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+  <main class="main">
+    <section class="section-box shop-template mt-60">
+      <div class="container">
+        <div class="row mb-100">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-5">
+            <h3>Member Login</h3>
+            <p class="font-md color-gray-500">Welcome back!</p>
+            <div class="form-register mt-30 mb-30">
+              <div class="form-group">
+                <label class="mb-5 font-sm color-gray-700">Email *</label>
+                <input class="form-control" type="text" placeholder="stevenjob@gmail.com" id="email">
+              </div>
+              <div class="form-group">
+                <label class="mb-5 font-sm color-gray-700">Password *</label>
+                <input class="form-control" type="password" placeholder="******************" id="password">
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="color-gray-500 font-xs">
+                      <input class="checkagree" type="checkbox">Remember me
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-6 text-end">
+                  <div class="form-group"><a class="font-xs color-gray-500" href="#">Forgot your password?</a></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input onclick="login()" class="font-md-bold btn btn-buy" type="submit" value="Sign In">
+              </div>
+              <div class="mt-20">
+                <span class="font-xs color-gray-500 font-medium">Have not an account?</span>
+                <a class="font-xs color-brand-3 font-medium" href="page-register.html">Sign Up</a>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-lg-5"></div>
+        </div>
+      </div>
+    </section>
+    <section class="section-box box-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-7 col-sm-12">
+            <h3 class="color-white">Subscrible &amp; Get <span class="color-warning">Offers</span></h3>
+            <p class="font-lg color-white">Get E-mail updates about our latest shop and <span
+                class="font-lg-bold">special offers.</span></p>
+          </div>
+          <div class="col-lg-4 col-md-5 col-sm-12">
+            <div class="box-form-newsletter mt-15">
+              <form class="form-newsletter">
+                <input class="input-newsletter font-xs" value="" placeholder="Your email Address">
+                <button class="btn btn-brand-2">Sign Up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Wholesaler confirmation Modal -->
+    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: none;">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <h5 class="modal-title" id="welcomeModalLabel">Welcome!</h5>
+            <p style="color: #8C9EC5;">Please select your user type:</p>
+            <div class="mt-3">
+              <button type="button" class="btn btn-primary btn-lg btn-block mb-3" onclick="handleUserClick('customer')"
+                style="background-color: #425A8B; color: #ffffff; border-width: 0; width: 72%;">
+                <strong style="font-weight: bold;">Customer</strong>
+                <p>If you're an individual looking to purchase products for personal use.</p>
+              </button>
+            </div>
+
+            <div>
+              <button type="button" class="btn btn-primary btn-lg btn-block mb-3"
+                onclick="handleUserClick('wholesaler')"
+                style="background-color: #1F2937; color: #ffffff; border-width: 0; width: 72%;">
+                <strong style="font-weight: bold;">Wholesaler</strong>
+                <p>If you're a business or entity interested in bulk purchases or wholesale deals.</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer bg-footer-homepage5">
+    <div class="footer-1">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-3 width-25 mb-30">
+            <h4 class="mb-30 color-gray-1000">Contact Us</h4>
+            <div class="font-md mb-20 color-gray-900"><strong class="font-md-bold">Address:</strong> 63 Victoria Street
+              Durban
+            </div>
+            <div class="font-md mb-20 color-gray-900"><strong class="font-md-bold">Phone:</strong> 071 954 9488
+            </div>
+            <div class="font-md mb-20 color-gray-900"><strong class="font-md-bold">E-mail:</strong> custom</div>
+            <div class="font-md mb-20 color-gray-900"><strong class="font-md-bold">Hours:</strong> 7:30 - 5:50, Mon -
+              Sat</div>
+            <div class="mt-30"><a class="icon-socials icon-facebook" href="#"></a><a class="icon-socials icon-instagram"
+                href="#"></a><a class="icon-socials icon-twitter" href="#"></a><a class="icon-socials icon-linkedin"
+                href="#"></a></div>
+          </div>
+          <div class="col-lg-3 width-16 mb-30">
+            <h4 class="mb-30 color-gray-1000">Company</h4>
+            <ul class="menu-footer">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Delivery Information</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Support Center</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 width-16 mb-30">
+            <h4 class="mb-30 color-gray-1000">My account</h4>
+            <ul class="menu-footer">
+              <li><a href="#">Your account</a></li>
+              <li><a href="#">Return center</a></li>
+              <li><a href="#">Purchase &amp; Orders</a></li>
+              <li><a href="#">Support Ticket</a></li>
+              <li><a href="#">Tracking Order</a></li>
+              <li><a href="#">Support Center</a></li>
+              <li><a href="#">Payment method</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 width-23">
+            <h4 class="mb-30 color-gray-1000">App &amp; Payment</h4>
+            <div>
+              <p class="font-md color-gray-900">Download our Apps and get extra 15% Discount on your first Order&mldr;!
+              </p>
+              <div class="mt-20"><a class="mr-10" href="#"><img src="assets/imgs/template/appstore.png"
+                    alt="ibest"></a><a href="#"><img src="assets/imgs/template/google-play.png" alt="ibest"></a></div>
+              <p class="font-md color-gray-900 mt-20 mb-10">Secured Payment Gateways</p><img
+                src="assets/imgs/template/payment-method.png" alt="ibest">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-2">
+      <div class="footer-bottom-1">
+        <div class="container">
+          <div class="footer-2-top mb-20"><a href="#"><img alt="ibest" src="assets/imgs/template/logo.svg"></a><a
+              class="font-xs color-gray-1000" href="#">ibest.com</a><a class="font-xs color-gray-1000" href="#">Our
+              Partners</a><a class="font-xs color-gray-1000" href="#">Our Bussiness</a></div>
+          <!--<div class="footer-2-bottom">
+            <div class="head-left-footer">
+              <h6 class="color-gray-1000">Quick Actions</h6>
+            </div>
+            <div class="tags-footer"><a href="#">Hard Covers</a><a href="#">Ladies Cover</a><a href="#">Clear
+                Cover</a><a href="#">Book Cover</a><a href="#">Silicon Cover</a><a href="#">Normal Protector</a><a
+                href="#">Full Flue Protector</a><a href="#">Ceramic Protector</a><a href="#">Privacy Tempered</a><a
+                href="#">Matte Protector</a><a href="#">Charger</a><a href="#">Cable</a><a href="#">Speaker</a><a
+                href="#">Power Bank</a><a href="#">Earphone</a><a href="#">Earpods</a><a href="#">Wireless Charger</a><a
+                href="#">Drones</a><a href="#">Lights</a><a href="#">Adaptors</a>
+              <a href="#">Earpods Cases</a><a href="#">Hard Drive</a><a href="#">Ram</a>
+              <a href="#">Watch</a><a href="#">Watch Accessories</a><a href="#">VR Glasses</a>
+              <a href="#">Selfie Stand</a><a href="#">Car Charger</a><a href="#">Car Holder</a><a href="#">Mp3
+                Player</a>
+              <a href="#">Car Lights</a><a href="#">Mouse</a><a href="#">Keyboard</a>
+              <a href="#">Headphone</a><a href="#">Mic</a>
+            </div>
+          </div>-->
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer-bottom mt-20">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 text-center text-lg-start"><span class="color-gray-900 font-sm">Copyright
+                &copy; 2024 ibest. All rights reserved.</span></div>
+            <div class="col-lg-6 col-md-12 text-center text-lg-end">
+              <ul class="menu-bottom">
+                <li><a class="font-sm color-gray-900" href="#">Conditions of Use</a></li>
+                <li><a class="font-sm color-gray-900" href="#">Privacy Notice</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/vendors/modernizr-3.6.0.min.js"></script>
+  <script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/vendors/jquery-migrate-3.3.0.min.js"></script>
+  <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/vendors/waypoints.js"></script>
+  <script src="assets/js/vendors/wow.js"></script>
+  <script src="assets/js/vendors/magnific-popup.js"></script>
+  <script src="assets/js/vendors/perfect-scrollbar.min.js"></script>
+  <script src="assets/js/vendors/select2.min.js"></script>
+  <script src="assets/js/vendors/isotope.js"></script>
+  <script src="assets/js/vendors/scrollup.js"></script>
+  <script src="assets/js/vendors/swiper-bundle.min.js"></script>
+  <script src="assets/js/vendors/noUISlider.js"></script>
+  <script src="assets/js/vendors/slider.js"></script>
+  <!-- Count down-->
+  <script src="assets/js/vendors/counterup.js"></script>
+  <script src="assets/js/vendors/jquery.countdown.min.js"></script>
+  <!-- Count down-->
+  <script src="assets/js/vendors/jquery.elevatezoom.js"></script>
+  <script src="assets/js/vendors/slick.js"></script>
+  <script src="assets/js/main.js?v=3.0.0"></script>
+  <script src="assets/js/shop.js?v=1.2.1"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAKUrhFJiaHhFlqu0w3zKTyhIgXJNIIg68",
+      authDomain: "ibest-ba2cf.firebaseapp.com",
+      projectId: "ibest-ba2cf",
+      storageBucket: "ibest-ba2cf.appspot.com",
+      messagingSenderId: "946876798909",
+      appId: "1:946876798909:web:b40bc879e556a26cafe4d4",
+      measurementId: "G-QYR88B09WG"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    var firestore = firebase.firestore();
+    var auth = firebase.auth();
+
+    function login() {
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      // Validate input fields
+      if (validate_email(email) == false || validate_password(password) == false) {
+        alert('Email or Password is Invalid');
+        return;
+        // Don't continue running the code
+      }
+
+      auth.signInWithEmailAndPassword(email, password)
+        .then(function () {
+          firestore = firebase.firestore();
+          const user = auth.currentUser;
+
+          // Check user role in Firestore
+          firestore.collection('admins').doc(user.uid).get()
+            .then(() => {
+              alert('User logged in');
+              window.location.replace('shop-grid.html');
+            })
+            .catch((error) => {
+              alert('Error checking user role:', error);
+              // Sign out the user in case of an error
+              auth.signOut();
+            });
+        })
+        .catch(function (error) {
+          // Firebase will use this to alert of its errors
+          const error_code = error.code;
+          const error_message = error.message;
+
+          alert(error_message);
+        });
+    }
+
+    // Function to update the wishlist count
+    function updateWishlistCount() {
+      var wishlistCountElement = document.getElementById('wishlistCount');
+      if (wishlistCountElement) {
+        wishlistCountElement.textContent = userData.wishlist ? userData.wishlist.length : 0;
+      }
+    }
+
+    // Function to update the cart count
+    function updateCartCount() {
+      var cartCountElement = document.getElementById('cartCount');
+      if (cartCountElement) {
+        cartCountElement.textContent = userData.cart ? userData.cart.length : 0;
+      }
+    }
+
+    document.getElementById('accountIcon').addEventListener('click', function () {
+      if (checkUserLoggedIn()) {
+        document.querySelector('.dropdown-account').classList.toggle('show');
+      } else {
+        var welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+        welcomeModal.show();
+      }
+    });
+
+    document.getElementById('wishlistIcon').addEventListener('click', function () {
+      if (checkUserLoggedIn()) {
+        window.location.href = 'shop-wishlist.html';
+      } else {
+        var welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+        welcomeModal.show();
+      }
+    });
+
+    document.getElementById('cartIcon').addEventListener('click', function () {
+      if (checkUserLoggedIn()) {
+        window.location.href = 'shop-cart.html';
+      } else {
+        var welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+        welcomeModal.show();
+      }
+    });
+
+    function handleUserClick(userChoise) {
+      $('#welcomeModal').modal('hide');
+
+      if (userChoise === 'customer') {
+        window.location.href = 'page-login.html';
+      } else {
+        window.location.href = 'page-wholesaler-register.html';
+      }
+    }
+
+    // Function to check if a user is logged in
+    function checkUserLoggedIn() {
+      var user = firebase.auth().currentUser;
+      if (user) {
+        console.log("user logged in");
+        return true;
+      } else {
+        console.log("user is not logged in");
+        return false;
+      }
+    }
+
+    // Function to sign out the user
+    function signOutUser() {
+      firebase.auth().signOut().then(function () {
+        console.log('User signed out successfully');
+        window.location.href = 'index.html';
+      }).catch(function (error) {
+        console.error('Error signing out:', error);
+      });
+    }
+
+    // Function to fetch user data when the authentication state changes
+    function onAuthStateChanged(user) {
+      if (user) {
+        fetchUserData();
+      } else {
+        console.log("No user is signed in.");
+      }
+    }
+
+    // Add a listener for authentication state changes
+    firebase.auth().onAuthStateChanged(onAuthStateChanged);
+
+    function fetchUserData() {
+      var user = firebase.auth().currentUser;
+
+      if (user) {
+        var userId = user.uid;
+        var userDocRef = firestore.collection("users").doc(userId);
+
+        userDocRef.get().then(function (doc) {
+          if (doc.exists) {
+            // User document found, access user data
+            userData = doc.data();
+            //console.log("Current user data:", userData);
+            updateWishlistCount();
+            updateCartCount();
+            //renderCartItems();
+          } else {
+            // User document not found
+            console.log("No user data found for current user.");
+          }
+        }).catch(function (error) {
+          console.error("Error getting user document:", error);
+        });
+      } else {
+        // No user is signed in
+        console.log("No user is signed in.");
+      }
+    }
+
+
+
+    // Function to read all documents from the 'categories' collection and populate the Shop by Categories
+    function popuateShopByCategories() {
+      var menu = document.querySelector('.menu-close');
+      var selectElement = document.querySelector('.select-active');
+
+      firestore.collection("categories").get()
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            // Access the data of each document
+            var data = doc.data();
+            var category = doc.id;
+            var subCategories = data.subCategories || [];
+            var imageUrl = data.imageURL;
+
+            // Create parent list item for category
+            var parentListItem = document.createElement('li');
+            parentListItem.classList.add('has-children');
+
+            // Create link for category
+            var categoryLink = document.createElement('a');
+            categoryLink.href = "javascript:;";
+
+            // Create image element for category
+            var imgLink = document.createElement('span');
+            imgLink.classList.add('img-link');
+            var img = document.createElement('img');
+            img.src = imageUrl;
+            img.alt = category;
+            imgLink.appendChild(img);
+
+            // Create span element for category text
+            var textLink = document.createElement('span');
+            textLink.classList.add('text-link');
+            textLink.textContent = category;
+
+            categoryLink.appendChild(imgLink);
+            categoryLink.appendChild(textLink);
+
+            // Add event listener for category click
+            categoryLink.addEventListener('click', function () {
+              const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent(category) + '&product=' + encodeURIComponent('All');
+              window.location.href = destinationUrl;
+            });
+
+            // Create unordered list for sub-categories
+            var subMenu = document.createElement('ul');
+            subMenu.classList.add('sub-menu');
+
+            // Populate sub-categories
+            subCategories.forEach(subCategory => {
+              var subCategoryItem = document.createElement('li');
+              var subCategoryLink = document.createElement('a');
+              subCategoryLink.href = "#";
+              subCategoryLink.classList.add('product-link');
+              subCategoryLink.textContent = subCategory;
+
+              // Add event listener for sub-category click
+              subCategoryLink.addEventListener('click', function () {
+                const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent(category) + '&product=' + encodeURIComponent(subCategory);
+                window.location.href = destinationUrl;
+              });
+
+              subCategoryItem.appendChild(subCategoryLink);
+              subMenu.appendChild(subCategoryItem);
+            });
+
+
+            // Create an option element for the category
+            var option = document.createElement('option');
+            option.value = category;
+            option.textContent = category;
+
+            // Add event listener for select change
+            selectElement.addEventListener('change', function () {
+              var selectedCategory = selectElement.value;
+              console.log('Selected Category:', selectedCategory);
+            });
+
+            // Append the option to the select element
+            selectElement.appendChild(option)
+
+            // Append category link and sub-menu to parent list item
+            parentListItem.appendChild(categoryLink);
+            parentListItem.appendChild(subMenu);
+
+            // Append parent list item to menu
+            menu.appendChild(parentListItem);
+          });
+        })
+        .catch((error) => {
+          console.error("Error reading documents: ", error);
+        });
+    }
+
+    // Select the input element
+    var inputElement = document.querySelector('.box-keysearch input');
+
+    // Add event listener for keydown event
+    inputElement.addEventListener('keydown', function (event) {
+      // Check if the pressed key is Enter
+      if (event.key === 'Enter') {
+        // Log the input value to the console
+        console.log('Search query:', inputElement.value);
+        const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent('All') + '&product=' + encodeURIComponent('All') + '&searchQuery=' + encodeURIComponent(inputElement.value);
+        window.location.href = destinationUrl;
+      }
+    });
+
+    popuateShopByCategories();
+
+
+    function validate_email(email) {
+      const expression = /^[^@]+@\w+(\.\w+)+\w$/;
+      return expression.test(email);
+    }
+
+    function validate_password(password) {
+      // Firebase only accepts lengths greater than 6
+      return password.length >= 6;
+    }
+  </script>
+
+</body>
+
+</html>
