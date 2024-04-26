@@ -439,7 +439,7 @@
                     <div class="wishlist-remove"><span class="font-md-bold color-brand-3">Remove</span></div>
                   </div>
                 </div>
-                <div class="content-wishlist">
+                <div class="content-wishlist" id="wishlist-container">
                   <!--Wishlist products are shown here-->
                 </div>
               </div>
@@ -1504,7 +1504,6 @@
 
     function renderWishlist() {
       isWishlistRender = true;
-      var wishlistContainer = document.querySelector('.content-wishlist');
 
       // Iterate through each wishlist item in the array
       userData.wishlist.forEach(function (wishlistItem) {
@@ -1512,7 +1511,6 @@
         var collectionDoc = wishlistItem.category;
         var subcollection = wishlistItem.product;
         var subcollectionDoc = wishlistItem.productId;
-
 
         // Fetch the product details from Firestore
         firestore.collection(collection).doc(collectionDoc).collection(subcollection).doc(subcollectionDoc).get().then(function (doc) {
@@ -1522,38 +1520,48 @@
             let newPrice = productData.price - discountedPrice;
             var stockStatus = productData.remainingStock > 0 ? 'In Stock' : 'Out of Stock';
 
-            // Create the product HTML
-            var productHTML = `
-                  <div class="content-wishlist">
-                    <div class="item-wishlist"  data-product-id="${doc.id}">
-                        <div class="wishlist-cb">
-                            <input class="cb-layout cb-select" type="checkbox">
-                        </div>
-                        <div class="wishlist-product">
-                            <div class="product-wishlist">
-                                <div class="product-image"><a href="shop-single-product.html?category=${productData.selectedCategory}&product=${productData.selectedSubCategorie}&productId=${doc.id}"><img src="${productData.featureImageUrl}" alt="${productData.product}"></a></div>
-                                <div class="product-info"><a href="shop-single-product.html?category=${productData.selectedCategory}&product=${productData.selectedSubCategorie}&productId=${doc.id}">
-                                    <h6 class="color-brand-3">${productData.product}</h6>
-                                </a>
-                                <div class="rating"><img src="assets/imgs/template/icons/star.svg" alt="ibest"><img
-                                  src="assets/imgs/template/icons/star.svg" alt="ibest"><img
-                                  src="assets/imgs/template/icons/star.svg" alt="ibest"><img
-                                  src="assets/imgs/template/icons/star.svg" alt="ibest"><img
-                                  src="assets/imgs/template/icons/star.svg" alt="ibest"><span class="font-xs color-gray-500">(${productData.stock})</span></div>
-                            </div>
-                        </div>
-                        <div class="wishlist-price">
-                            <h4 class="color-brand-3">${Math.floor(newPrice)} R</h4>
-                        </div>
-                        <div class="wishlist-status"><span class="btn btn-gray font-md-bold color-brand-3">${stockStatus}</span></div>
-                        <div class="wishlist-action"><a class="btn btn-cart font-sm-bold" href="shop-single-product.html?category=${productData.selectedCategory}&product=${productData.selectedSubCategorie}&productId=${doc.id}">View Details</a></div>
-                        <div class="wishlist-remove"><a class="btn btn-delete" onclick="removeFromWishlist('${productData.selectedCategory}', '${productData.selectedSubCategorie}', '${doc.id}')"></a></div>
-                    </div>
-                  </div>
-                `;
+            // Create elements to populate the HTML
+            var wishlistItemDiv = document.createElement("div");
+            wishlistItemDiv.classList.add("item-wishlist");
+            wishlistItemDiv.setAttribute("data-product-id", doc.id);
 
-            // Append the product HTML to the wishlist container
-            wishlistContainer.insertAdjacentHTML('beforeend', productHTML);
+
+
+            var wishlistCB = document.createElement("div");
+            wishlistCB.classList.add("wishlist-cb");
+            wishlistCB.innerHTML = '<input class="cb-layout cb-select" type="checkbox">';
+
+            var wishlistProductDiv = document.createElement("div");
+            wishlistProductDiv.classList.add("wishlist-product");
+            wishlistProductDiv.innerHTML = '<div class="product-wishlist">' +
+              `<div class="product-image"><a href="shop-single-product.html?category=${productData.selectedCategory}&product=${productData.selectedSubCategorie}&productId=${doc.id}"><img src="${productData.featureImageUrl}" alt="${productData.product}"></a></div>` +
+              `<div class="product-info"><a href="shop-single-product.html?category=${productData.selectedCategory}&product=${productData.selectedSubCategorie}&productId=${doc.id}"><h6 class="color-brand-3">${productData.product}</h6></a>`;
+
+            var wishlistPriceDiv = document.createElement("div");
+            wishlistPriceDiv.classList.add("wishlist-price");
+            wishlistPriceDiv.innerHTML = '<h4 class="color-brand-3">' + Math.floor(newPrice) + ' R</h4>';
+
+            var wishlistStatusDiv = document.createElement("div");
+            wishlistStatusDiv.classList.add("wishlist-status");
+            wishlistStatusDiv.innerHTML = '<span class="btn btn-gray font-md-bold color-brand-3">' + stockStatus + '</span>';
+
+            var wishlistActionDiv = document.createElement("div");
+            wishlistActionDiv.classList.add("wishlist-action");
+            wishlistActionDiv.innerHTML = `<a class="btn btn-cart font-sm-bold" href="shop-single-product.html?category=${productData.selectedCategory}&product=${productData.selectedSubCategorie}&productId=${doc.id}">View Details</a>`;
+
+            var wishlistRemoveDiv = document.createElement("div");
+            wishlistRemoveDiv.classList.add("wishlist-remove");
+            wishlistRemoveDiv.innerHTML = `<a class="btn btn-delete" onclick="removeFromWishlist('${productData.selectedCategory}', '${productData.selectedSubCategorie}', '${doc.id}')"></a>`;
+
+            wishlistItemDiv.appendChild(wishlistCB);
+            wishlistItemDiv.appendChild(wishlistProductDiv);
+            wishlistItemDiv.appendChild(wishlistPriceDiv);
+            wishlistItemDiv.appendChild(wishlistStatusDiv);
+            wishlistItemDiv.appendChild(wishlistActionDiv);
+            wishlistItemDiv.appendChild(wishlistRemoveDiv);
+
+            // Append the populated wishlist item to the container
+            document.getElementById("wishlist-container").appendChild(wishlistItemDiv);
           } else {
             console.log("No such document!");
           }
