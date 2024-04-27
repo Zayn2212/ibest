@@ -1814,9 +1814,9 @@
                   (((newPrice >= selectedRange.min && newPrice <= selectedRange.max) && (data.colors.some(colorObj => colorObj.color.toLowerCase() === selectedColor.toLowerCase()))) && selectedTag === 'Null') ||
                   (((newPrice >= selectedRange.min && newPrice <= selectedRange.max) && (data.tags.some(tag => tag.toLowerCase() === selectedTag.toLowerCase()))) && selectedColor === 'Null'))
               ) {
-                //showProduct();
+                showProduct();
               }
-              showProduct();
+              //showProduct();
 
               function showProduct() {
                 let discountedWholesalePrice = data.wholsalePrice * (data.wholesaleDiscount / 100);
