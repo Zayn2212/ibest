@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="msapplication-TileColor" content="#0E0E0E">
+  <meta name="template-color" content="#0E0E0E">
+  <meta name="description" content="Index page">
+  <meta name="keywords" content="index, page">
+  <meta name="author" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/template/favicon.svg">
+  <link href="assets/css/style.css?v=3.0.0" rel="stylesheet">
+  <title>Checkout - ibest </title>
+</head>
+
+<body>
+  <div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+      <div class="preloader-inner position-relative">
+        <div class="text-center"><img class="mb-10" src="assets/imgs/template/favicon.svg" alt="ibest">
+          <div class="preloader-dots"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topbar top-brand-2">
+    <div class="container-topbar">
+      <div class="menu-topbar-left d-none d-xl-block">
+        <ul class="nav-small">
+          <li><a class="font-xs" href="index.html">Home</a></li>
+          <li><a class="font-xs" href="shop-grid.html">New Arrival</a></li>
+          <li><a class="font-xs" href="page-contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="info-topbar text-center d-none d-xl-block"><span class="font-xs color-brand-3">Free shipping for all
+          orders over</span><span class="font-sm-bold color-success"> R 750.00</span></div>
+      <div class="menu-topbar-right">
+        <div class="dropdown dropdown-language">
+          <button class="btn dropdown-toggle" id="dropdownPage" type="button" data-bs-toggle="dropdown"
+            aria-expanded="true" data-bs-display="static"><span class=" font-xs color-brand-3"><img
+                src="assets/imgs/template/en.svg" alt="ibest"> English </span></button>
+        </div>
+        <div class="dropdown dropdown-language">
+        </div>
+      </div>
+    </div>
+  </div>
+  <header class="header header-container sticky-bar">
+    <div class="container">
+      <div class="main-header">
+        <div class="header-left">
+          <div class="header-logo">
+            <a href="index.html">
+              <img alt="ibest" src="assets/imgs/template/logo.svg">
+            </a>
+          </div>
+          <div class="header-search">
+            <div class="box-header-search">
+              <div class="form-search">
+                <div class="box-category">
+                  <select class="select-active select2-hidden-accessible" data-select2-id="1" tabindex="-1"
+                    aria-hidden="true">
+                    <option value="All">All categories</option>
+                    <!--All categories will show here-->
+                  </select>
+                </div>
+                <div class="box-keysearch">
+                  <input class="form-control font-xs" type="text" value="" placeholder="Search for items">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-nav text-start">
+          </div>
+          <div class="header-shop">
+            <div class="d-inline-block box-dropdown-cart"><span class="font-lg icon-list icon-account"
+                id="accountIcon"><span>Account</span></span>
+              <div class="dropdown-account">
+                <ul>
+                  <li><a href="page-account.html">My Account</a></li>
+                  <li><a href="page-account.html">My Orders</a></li>
+                  <li><a href="shop-wishlist.html">My Wishlist</a></li>
+                  <li><a href="page-account.html">Setting</a></li>
+                  <li id="signinLink"><a href="#" onclick="signInOrOut()"></a></li>
+                </ul>
+              </div>
+            </div><a class="font-lg icon-list icon-wishlist" id="wishlistIcon"><span>Wishlist</span><span
+                class="number-item font-xs" id="wishlistCount">0</span></a>
+            <a class="d-inline-block box-dropdown-cart" id="cartIcon">
+              <span class="font-lg icon-list icon-cart">
+                <span>Cart</span>
+                <span class="number-item font-xs" id="cartCount">0</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+        <div class="dropdown d-inline-block">
+          <button class="btn dropdown-toggle btn-category" id="dropdownCategory" type="button" data-bs-toggle="dropdown"
+            aria-expanded="true" data-bs-display="static"><span class="dropdown-right font-sm-bold color-white">Shop By
+              Categories</span></button>
+          <div class="sidebar-left dropdown-menu dropdown-menu-light" aria-labelledby="dropdownCategory"
+            data-bs-popper="static">
+            <ul class="menu-texts menu-close">
+              <!--Catgories and Sub-categories will show here-->
+            </ul>
+          </div>
+        </div>
+        <div class="mobile-keysearch">
+          <input id="searchInput" class="form-control font-xs" type="text" value="" placeholder="Search">
+        </div>
+        <div class="mobile-icons">
+          <div class="mobile-icon dropdown">
+            <a href="#" class="mobile-icon-link"><img src="assets/imgs/template/account.svg" alt="Account Icon"
+                id="accountIconMobile"></a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="page-account.html">My Account</a></li>
+                <li><a href="page-account.html">My Orders</a></li>
+                <li><a href="shop-wishlist.html">My Wishlist</a></li>
+                <li><a href="page-account.html">Setting</a></li>
+                <li id="signinLinkMobile"><a href="#" onclick="signInOrOut()"></a></li>
+              </ul>
+            </div>
+          </div>
+          <a href="shop-wishlist.html" class="mobile-icon-link"><img src="assets/imgs/template/wishlist.svg"
+              alt="Wishlist Icon"><span class="badge top-right" id="wishlistCountMobile">0</span></a>
+          <a href="shop-cart.html" class="mobile-icon-link"><img src="assets/imgs/template/cart.svg"
+              alt="Cart Icon"><span class="badge top-right" id="cartCountMobile">0</span></a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="section-box">
+
+    </div>
+    <section class="section-box shop-template">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="box-border">
+              <!--<div class="box-payment"><a class="btn btn-gpay"><img src="assets/imgs/page/checkout/gpay.svg" alt="ibest"></a><a class="btn btn-paypal"><img src="assets/imgs/page/checkout/paypal.svg" alt="ibest"></a><a class="btn btn-amazon"><img src="assets/imgs/page/checkout/amazon.svg" alt="ibest"></a></div>
+                <div class="border-bottom-4 text-center mb-20">
+                  <div class="text-or font-md color-gray-500">Or</div>
+                </div>-->
+              <div class="row">
+                <div class="col-lg-6 col-sm-6 mb-20">
+                  <h5 class="font-md-bold color-brand-3 text-sm-start text-center">Contact information</h5>
+                </div>
+
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <input class="form-control font-sm" type="text" placeholder="Email*" id="email">
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label class="font-sm color-brand-3" for="checkboxOffers">
+                      <input class="checkboxOffer" id="checkboxOffers" type="checkbox">Keep me up to date on news and
+                      exclusive offers
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <h5 class="font-md-bold color-brand-3 mt-15 mb-20">Shipping address</h5>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input class="form-control font-sm" type="text" placeholder="First name*" id="firstname">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input class="form-control font-sm" type="text" placeholder="Last name*" id="lastname">
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <input class="form-control font-sm" type="text" placeholder="Address 1*" id="address1">
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <input class="form-control font-sm" type="text" placeholder="Address 2*" id="address2">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <select id="provinceSelect" class="form-control font-sm select-style1 color-gray-700">
+                      <option value="Riyadh">Riyadh</option>
+                      <option value="Makkah">Makkah</option>
+                      <option value="Madinah">Madinah</option>
+                      <option value="Eastern">Eastern</option>
+                      <option value="Asir">Asir</option>
+                      <option value="Tabuk">Tabuk</option>
+                      <option value="Al-Qassim">Al-Qassim</option>
+                      <option value="Ha'il">Ha'il</option>
+                      <option value="Jizan">Jizan</option>
+                      <option value="Najran">Najran</option>
+                      <option value="Al-Bahah">Al-Bahah</option>
+                      <option value="Northern Borders">Northern Borders</option>
+                      <option value="Al-Jawf">Al-Jawf</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input class="form-control font-sm" type="text" placeholder="City*" id="city">
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <input class="form-control font-sm" type="text" placeholder="PostCode / ZIP*" id="postCode">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input class="form-control font-sm" type="text" placeholder="Company name" id="companyName">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input class="form-control font-sm" type="text" placeholder="Phone*" id="phoneNo">
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group mb-0">
+                    <textarea class="form-control font-sm" placeholder="Additional Information" rows="5"
+                      id="addInfo"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-20">
+              <div class="col-lg-6 col-5 mb-20"><a class="btn font-sm-bold color-brand-1 arrow-back-1"
+                  href="shop-cart.html">Return to Cart</a></div>
+              <div class="col-lg-6 col-7 mb-20 text-end"><a class="btn btn-buy w-auto arrow-next"
+                  onclick="placeOrder()">Place an Order</a></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box-border">
+              <h5 class="font-md-bold mb-20">Your Order</h5>
+              <div class="listCheckout" style="height: 520px; overflow-y: auto;">
+                <!--products show here-->
+              </div>
+              <!--<div class="form-group d-flex mt-15">
+                <input class="form-control mr-15" placeholder="Enter Your Coupon">
+                <button class="btn btn-buy w-auto">Apply</button>
+              </div>-->
+              <div class="form-group mb-0">
+                <div class="row mb-10">
+                  <div class="col-lg-6 col-6"><span class="font-md-bold color-brand-3">Subtotal</span></div>
+                  <div class="col-lg-6 col-6 text-end"><span class="font-lg-bold color-brand-3">R 0</span></div>
+                </div>
+                <div class="border-bottom mb-10 pb-5">
+                  <div class="row">
+                    <div class="col-lg-6 col-6"><span class="font-md-bold color-brand-3">Shipping</span></div>
+                    <div class="col-lg-6 col-6 text-end"><span class="font-lg-bold color-brand-3">-</span></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 col-6"><span class="font-md-bold color-brand-3">Total</span></div>
+                  <div class="col-lg-6 col-6 text-end"><span class="font-lg-bold color-brand-3">R 0</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-box mt-90 mb-50">
+      <div class="container custon-margin-section-box">
+        <ul class="list-col-5">
+          <li>
+            <div class="item-list">
+              <div class="icon-left"><img src="assets/imgs/template/delivery.svg" alt="ibest"></div>
+              <div class="info-right">
+                <h5 class="font-lg-bold color-gray-100">Free Delivery</h5>
+                <p id="delivery-info" class="font-sm color-gray-500">All orders over R 3000</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-list">
+              <div class="icon-left"><img src="assets/imgs/template/support.svg" alt="ibest"></div>
+              <div class="info-right">
+                <h5 class="font-lg-bold color-gray-100">Support 24/7</h5>
+                <p class="font-sm color-gray-500">Shop with an expert</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-list">
+              <div class="icon-left"><img src="assets/imgs/template/voucher.svg" alt="ibest"></div>
+              <div class="info-right">
+                <h5 class="font-lg-bold color-gray-100">Gift voucher</h5>
+                <p class="font-sm color-gray-500">Refer a friend</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-list">
+              <div class="icon-left"><img src="assets/imgs/template/return.svg" alt="ibest"></div>
+              <div class="info-right">
+                <h5 class="font-lg-bold color-gray-100">Return &amp; Refund</h5>
+                <p class="font-sm color-gray-500">For wrong items only</p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-list">
+              <div class="icon-left"><img src="assets/imgs/template/secure.svg" alt="ibest"></div>
+              <div class="info-right">
+                <h5 class="font-lg-bold color-gray-100">Secure payment</h5>
+                <p class="font-sm color-gray-500">100% Protected</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-box box-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-7 col-sm-12">
+            <h3 class="color-white">Subscrible &amp; Get <span class="color-warning">Offers</span></h3>
+            <p class="font-lg color-white">Get E-mail updates about our latest shop and <span
+                class="font-lg-bold">special offers.</span></p>
+          </div>
+          <div class="col-lg-4 col-md-5 col-sm-12">
+            <div class="box-form-newsletter mt-15">
+              <form class="form-newsletter">
+                <input class="input-newsletter font-xs" value="" placeholder="Your email Address">
+                <button class="btn btn-brand-2">Sign Up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <div class="modal fade" id="ModalFiltersForm" tabindex="-1" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content apply-job-form">
+          <div class="modal-header">
+            <h5 class="modal-title color-gray-1000 filters-icon">Addvance Fillters</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-30">
+            <div class="row">
+              <div class="col-w-1">
+                <h6 class="color-gray-900 mb-0">Brands</h6>
+                <ul class="list-checkbox">
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox" checked="checked"><span class="text-small">Apple</span><span
+                        class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Samsung</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Baseus</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Remax</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Handtown</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Elibest</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Razer</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Auto Focus</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Nillkin</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Logitech</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">ChromeBook</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-w-1">
+                <h6 class="color-gray-900 mb-0">Special offers</h6>
+                <ul class="list-checkbox">
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">On sale</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox" checked="checked"><span class="text-small">FREE shipping</span><span
+                        class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Big deals</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Shop Mall</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                </ul>
+                <h6 class="color-gray-900 mb-0 mt-40">Ready to ship in</h6>
+                <ul class="list-checkbox">
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">1 business day</span><span
+                        class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox" checked="checked"><span class="text-small">1&ndash;3 business
+                        days</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">in 1 week</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Shipping now</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-w-1">
+                <h6 class="color-gray-900 mb-0">Ordering options</h6>
+                <ul class="list-checkbox">
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Accepts gift cards</span><span
+                        class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Customizable</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox" checked="checked"><span class="text-small">Can be gift-wrapped</span><span
+                        class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Installment 0%</span><span
+                        class="checkmark"></span>
+                    </label>
+                  </li>
+                </ul>
+                <h6 class="color-gray-900 mb-0 mt-40">Rating</h6>
+                <ul class="list-checkbox">
+                  <li class="mb-5"><a href="#"><img src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star.svg" alt="ibest"><span
+                        class="ml-10 font-xs color-gray-500 d-inline-block align-top">(5 stars)</span></a></li>
+                  <li class="mb-5"><a href="#"><img src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><span
+                        class="ml-10 font-xs color-gray-500 d-inline-block align-top">(4 stars)</span></a></li>
+                  <li class="mb-5"><a href="#"><img src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><span
+                        class="ml-10 font-xs color-gray-500 d-inline-block align-top">(3 stars)</span></a></li>
+                  <li class="mb-5"><a href="#"><img src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><span
+                        class="ml-10 font-xs color-gray-500 d-inline-block align-top">(2 stars)</span></a></li>
+                  <li class="mb-5"><a href="#"><img src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><img
+                        src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><span
+                        class="ml-10 font-xs color-gray-500 d-inline-block align-top">(1 star)</span></a></li>
+                </ul>
+              </div>
+              <div class="col-w-2">
+                <h6 class="color-gray-900 mb-0">Material</h6>
+                <ul class="list-checkbox">
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Nylon (8)</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Tempered Glass (5)</span><span
+                        class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox" checked="checked"><span class="text-small">Liquid Silicone Rubber
+                        (5)</span><span class="checkmark"></span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="cb-container">
+                      <input type="checkbox"><span class="text-small">Aluminium Alloy (3)</span><span
+                        class="checkmark"></span>
+                    </label>
+                  </li>
+                </ul>
+                <h6 class="color-gray-900 mb-20 mt-40">Product tags</h6>
+                <div><a class="btn btn-border mr-5" href="#">Games</a><a class="btn btn-border mr-5"
+                    href="#">Electronics</a><a class="btn btn-border mr-5" href="#">Video</a><a
+                    class="btn btn-border mr-5" href="#">Cellphone</a><a class="btn btn-border mr-5"
+                    href="#">Indoor</a><a class="btn btn-border mr-5" href="#">VGA Card</a><a
+                    class="btn btn-border mr-5" href="#">USB</a><a class="btn btn-border mr-5" href="#">Lightning</a><a
+                    class="btn btn-border mr-5" href="#">Camera</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-start pl-30"><a class="btn btn-buy w-auto" href="#">Apply
+              Fillter</a><a class="btn font-sm-bold color-gray-500" href="#">Reset Fillter</a></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer bg-footer-homepage5">
+    <div class="footer-1">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-3 width-25 mb-30">
+            <h4 class="mb-30 color-gray-1000">Contact Us</h4>
+            <div class="font-md mb-20 color-gray-900"><strong class="font-md-bold">Address:</strong> 63 Victoria Street
+              Durban
+            </div>
+            <div class="font-md mb-20 color-gray-900"><strong class="font-md-bold">Phone:</strong> 071 954 9488
+            </div>
+            <div class="font-md mb-20 color-gray-900"><strong class="font-md-bold">E-mail:</strong> custom</div>
+            <div class="font-md mb-20 color-gray-900"><strong class="font-md-bold">Hours:</strong> 7:30 - 5:50, Mon -
+              Sat</div>
+            <div class="mt-30"><a class="icon-socials icon-facebook" href="#"></a><a class="icon-socials icon-instagram"
+                href="#"></a><a class="icon-socials icon-twitter" href="#"></a><a class="icon-socials icon-linkedin"
+                href="#"></a></div>
+          </div>
+          <div class="col-lg-3 width-16 mb-30">
+            <h4 class="mb-30 color-gray-1000">Company</h4>
+            <ul class="menu-footer">
+              <li><a href="page-about-us.html">About us</a></li>
+              <li><a href="page-404.html">Delivery Information</a></li>
+              <li><a href="page-term-condition.html">Terms &amp; Conditions</a></li>
+              <li><a href="page-contact.html">Contact us</a></li>
+              <li><a href="page-contact.html">Support Center</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 width-16 mb-30">
+            <h4 class="mb-30 color-gray-1000">My account</h4>
+            <ul class="menu-footer">
+              <li><a href="page-account.html">Your account</a></li>
+              <li><a href="page-contact.html">Return center</a></li>
+              <li><a href="page-account.html">Orders</a></li>
+              <li><a href="page-account.html">Support Center</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 width-23">
+            <h4 class="mb-30 color-gray-1000">App &amp; Payment</h4>
+            <div>
+              <p class="font-md color-gray-900">Download our Apps and get extra 15% Discount on your first Order&mldr;!
+              </p>
+              <div class="mt-20"><a class="mr-10" href="#"><img src="assets/imgs/template/appstore.png"
+                    alt="ibest"></a><a href="#"><img src="assets/imgs/template/google-play.png" alt="ibest"></a></div>
+              <p class="font-md color-gray-900 mt-20 mb-10">Secured Payment Gateways</p><img
+                src="assets/imgs/template/payment-method.png" alt="ibest">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-2">
+      <div class="footer-bottom-1">
+        <div class="container">
+          <div class="footer-2-top mb-20"><a href="#"><img alt="ibest" src="assets/imgs/template/logo.svg"></a><a
+              class="font-xs color-gray-1000" href="index.html">ibest.com</a><a class="font-xs color-gray-1000" href="#">Our
+              Partners</a><a class="font-xs color-gray-1000" href="#">Our Bussiness</a></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer-bottom mt-20">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 text-center text-lg-start"><span class="color-gray-900 font-sm">Copyright
+                &copy; 2024 ibest. All rights reserved.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/vendors/modernizr-3.6.0.min.js"></script>
+  <script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/vendors/jquery-migrate-3.3.0.min.js"></script>
+  <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/vendors/waypoints.js"></script>
+  <script src="assets/js/vendors/wow.js"></script>
+  <script src="assets/js/vendors/magnific-popup.js"></script>
+  <script src="assets/js/vendors/perfect-scrollbar.min.js"></script>
+  <script src="assets/js/vendors/select2.min.js"></script>
+  <script src="assets/js/vendors/isotope.js"></script>
+  <script src="assets/js/vendors/scrollup.js"></script>
+  <script src="assets/js/vendors/swiper-bundle.min.js"></script>
+  <script src="assets/js/vendors/noUISlider.js"></script>
+  <script src="assets/js/vendors/slider.js"></script>
+  <!-- Count down-->
+  <script src="assets/js/vendors/counterup.js"></script>
+  <script src="assets/js/vendors/jquery.countdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Count down-->
+  <script src="assets/js/vendors/jquery.elevatezoom.js"></script>
+  <script src="assets/js/vendors/slick.js"></script>
+  <script src="assets/js/main.js?v=3.0.0"></script>
+  <script src="assets/js/shop.js?v=1.2.1"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAKUrhFJiaHhFlqu0w3zKTyhIgXJNIIg68",
+      authDomain: "ibest-ba2cf.firebaseapp.com",
+      projectId: "ibest-ba2cf",
+      storageBucket: "ibest-ba2cf.appspot.com",
+      messagingSenderId: "946876798909",
+      appId: "1:946876798909:web:b40bc879e556a26cafe4d4",
+      measurementId: "G-QYR88B09WG"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    var firestore = firebase.firestore();
+    var auth = firebase.auth();
+    var db = firebase.firestore();
+    var subtotal;
+    var userData = {};
+    var totalPrices = [];
+
+    // Get the URL parameters
+    var urlParams = new URLSearchParams(window.location.search);
+    var productsDetailsParam = urlParams.get('productsDetails');
+    var productsDetails = JSON.parse(decodeURIComponent(productsDetailsParam));
+
+    if (productsDetails) {
+      console.log("Product Details:", productsDetails);
+      renderCheckoutProducts()
+        .then(() => {
+          populateSubtotal();
+        })
+        .catch((error) => {
+          console.error('Error fetching and displaying products:', error);
+        });
+
+    }
+
+
+
+
+    // Function to render products from the cart array
+    function renderCheckoutProducts() {
+      return new Promise((resolve, reject) => {
+        var checkoutContainer = document.querySelector('.listCheckout');
+        subtotal = 0;
+
+        // Iterate through each item in the cart array
+        productsDetails.forEach(function (cartItem, index, array) {
+          var collection = "products";
+          var doc = cartItem.category;
+          var subcollection = cartItem.product;
+          var subDoc = cartItem.productId;
+
+          // Fetch the product details from Firestore
+          firestore.collection(collection).doc(doc).collection(subcollection).doc(subDoc).get().then(function (doc) {
+            if (doc.exists) {
+              var productData = doc.data();
+              let discountedPrice = productData.price * (productData.discount / 100);
+              let basePrice = (productData.price - discountedPrice) * cartItem.productSpecs.quantity;
+              subtotal += basePrice;
+              var price = {
+                uniqueId: cartItem.uniqueId,
+                price: basePrice
+              };
+
+              totalPrices.push(price);
+
+              // Create HTML elements for the product
+              var productElement = document.createElement('div');
+              productElement.classList.add('item-wishlist');
+
+              productElement.innerHTML = `
+          <div class="wishlist-product" data-product-id="${cartItem.uniqueId}">
+            <div class="product-wishlist">
+              <div class="product-image"><a href="shop-single-product.html?category=${productData.selectedCategory}&product=${productData.selectedSubCategorie}&productId=${doc.id}"><img src="${productData.featureImageUrl}" alt="${productData.product}"></a></div>
+              <div class="product-info"><a href="shop-single-product.html?category=${productData.selectedCategory}&product=${productData.selectedSubCategorie}&productId=${doc.id}"><h6 class="color-brand-3">${productData.product}</h6></a>
+              </div>
+            </div>
+          </div>
+          <div class="wishlist-status">
+            <h5 class="color-gray-500">x${cartItem.productSpecs.quantity}</h5>
+          </div>
+          <div class="wishlist-price">
+            <h4 class="color-brand-3 font-lg-bold">R${basePrice.toFixed(0)}</h4>
+          </div>
+          `;
+
+              // Append the product element to the container
+              checkoutContainer.appendChild(productElement);
+
+              // Check if this is the last item to render
+              if (index === array.length - 1) {
+                // Resolve the Promise after rendering all products
+                resolve();
+              }
+            } else {
+              console.log("No such document!");
+              // If this is the last item to render and there's an error, reject the Promise
+              if (index === array.length - 1) {
+                reject("Error rendering products: No such document");
+              }
+            }
+          }).catch(function (error) {
+            console.error("Error getting product document:", error);
+            // If this is the last item to render and there's an error, reject the Promise
+            if (index === array.length - 1) {
+              reject("Error rendering products: " + error.message);
+            }
+          });
+        });
+      });
+    }
+
+
+
+    // Helper function to generate rating stars HTML
+    function generateRatingStars(rating) {
+      let starsHTML = '';
+      for (let i = 0; i < 5; i++) {
+        if (i < rating) {
+          starsHTML += '<img src="assets/imgs/template/icons/star.svg" alt="ibest">';
+        } else {
+          starsHTML += '<img src="assets/imgs/template/icons/star-empty.svg" alt="ibest">';
+        }
+      }
+      return starsHTML;
+    }
+
+    function populateSubtotal() {
+      console.log(subtotal);
+      // Update subtotal element
+      document.querySelector('.form-group .row:nth-child(1) .col-lg-6.col-6.text-end .font-lg-bold.color-brand-3').textContent = 'R ' + subtotal.toFixed(2);
+      // Update total element
+      document.querySelector('.form-group .row:nth-child(3) .col-lg-6.col-6.text-end .font-lg-bold.color-brand-3').textContent = 'R ' + subtotal.toFixed(2);
+
+    }
+
+    function placeOrder() {
+      var totalElement = document.querySelector('.form-group .row:nth-child(3) .col-lg-6.col-6.text-end .font-lg-bold.color-brand-3');
+      var totalPrice = totalElement.textContent.trim();
+      // Extract the numerical value from the text (assuming the format is "R <number>")
+      //var totalValue = parseFloat(totalText.replace('R', '').trim());
+
+
+
+      var contactEmail = document.getElementById("email").value;
+      var keepUpdate = document.getElementById("checkboxOffers").checked;
+      var firstName = document.getElementById("firstname").value;
+      var lastName = document.getElementById("lastname").value;
+      var address1 = document.getElementById("address1").value;
+      var address2 = document.getElementById("address2").value;
+      var province = document.getElementById("provinceSelect").value;
+      var city = document.getElementById("city").value;
+      var postCode = document.getElementById("postCode").value;
+      var companyName = document.getElementById("companyName").value;
+      var phoneNo = document.getElementById("phoneNo").value;
+      var addInfo = document.getElementById("addInfo").value;
+      var user = firebase.auth().currentUser;
+
+      if (!contactEmail || !firstName || !lastName || (!address1 && !address2) || !province || !city || !postCode || !phoneNo) {
+        //alert("Please fill in the required fields");
+        Swal.fire({
+          icon: "error",
+          title: "Please fill all the required fields!",
+          confirmButtonColor: '#BF141F',
+          customClass: {
+            title: 'alertClass',
+            popup: 'alertClassPopup'
+          }
+        });
+        return;
+      }
+
+      var orderInfo = {
+        contactEmail,
+        keepUpdate,
+        firstName,
+        lastName,
+        address1,
+        address2,
+        province,
+        city,
+        postCode,
+        companyName,
+        phoneNo,
+        addInfo
+      };
+
+      if (user) {
+        var userDocRef = firestore.collection("users").doc(user.uid);
+
+        userDocRef.update({
+          orderInfo: orderInfo
+        })
+          .then(function () {
+            console.log("Order info added to user document successfully.");
+          })
+          .catch(function (error) {
+            console.error("Error adding order info to user document: ", error);
+          });
+      } else {
+        console.log("No user is signed in.");
+      }
+
+      var totalItems = productsDetails.length;
+      var successfulPlacements = 0;
+
+      productsDetails.forEach(function (cartItem) {
+
+        if (user) {
+          var userDocRef = firestore.collection("users").doc(user.uid);
+
+          userDocRef.get().then(function (doc) {
+            if (doc.exists) {
+              var orders = doc.data().orders || [];
+            }
+
+            var filteredPrice = totalPrices.filter(item => item.uniqueId === cartItem.uniqueId);
+
+            userDocRef.update({
+              orders: firebase.firestore.FieldValue.arrayUnion({
+                category: cartItem.category,
+                subCategory: cartItem.product,
+                productId: cartItem.productId,
+                productSpecs: cartItem.productSpecs,
+                orderInfo: orderInfo,
+                orderDate: new Date(),
+                orderId: cartItem.uniqueId,
+                viewed: false,
+                status: "progress",
+                totalPrice: filteredPrice[0].price
+              })
+            })
+              .then(function () {
+                successfulPlacements++;
+
+
+                if (successfulPlacements === totalItems) {
+                  console.log("Order placed successfully!");
+
+                  removeFromCart(user, productsDetails)
+                    .then(() => {
+                      console.log("Items removed from cart successfully.");
+                      //alert("Order placed successfully!");
+                      showAlert("Order Placed Successfully!");
+                    })
+                    .catch(error => {
+                      console.error("Error removing items from cart:", error);
+                    });
+                }
+              })
+              .catch(function (error) {
+                console.error("Error placing order: ", error);
+              });
+          }).catch(function (error) {
+            console.error("Error getting user document:", error);
+          });
+        } else {
+          // No user is signed in
+          console.log("No user is signed in.");
+        }
+      });
+    }
+
+    function showAlert(text) {
+      Swal.fire({
+        title: text,
+        icon: "success",
+        confirmButtonColor: '#BF141F',
+        customClass: {
+          title: 'alertClass',
+          popup: 'alertClassPopup'
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = "page-account.html?activePage=order";
+        }
+      });
+
+    }
+
+
+    function populateOrderInfo() {
+      console.log("userDta:", userData);
+
+      var orderInfo = userData.orderInfo;
+      // Populate form fields with orderInfo values
+
+      if (orderInfo) {
+        // Populate form fields with orderInfo values
+        document.getElementById("email").value = orderInfo.contactEmail;
+        document.getElementById("checkboxOffers").checked = orderInfo.keepUpdate;
+        document.getElementById("firstname").value = orderInfo.firstName;
+        document.getElementById("lastname").value = orderInfo.lastName;
+        document.getElementById("address1").value = orderInfo.address1;
+        document.getElementById("address2").value = orderInfo.address2;
+        document.getElementById("provinceSelect").value = orderInfo.province;
+        document.getElementById("city").value = orderInfo.city;
+        document.getElementById("postCode").value = orderInfo.postCode;
+        document.getElementById("companyName").value = orderInfo.companyName;
+        document.getElementById("phoneNo").value = orderInfo.phoneNo;
+        document.getElementById("addInfo").value = orderInfo.addInfo;
+      } else {
+        console.log("order info not avialable");
+      }
+    }
+
+
+
+    function removeFromCart(user, productsDetails) {
+      return new Promise((resolve, reject) => {
+        var userDocRef = firestore.collection("users").doc(user.uid);
+
+        userDocRef.get().then(function (doc) {
+          if (doc.exists) {
+            var cart = doc.data().cart || [];
+            console.log("Original cart:", cart);
+
+            // Iterate over productsDetails and remove items from cart with matching uniqueId
+            productsDetails.forEach(function (product) {
+              cart = cart.filter(item => item.uniqueId !== product.uniqueId);
+            });
+
+            // Update the cart in the user's document
+            userDocRef.update({
+              cart: cart
+            })
+              .then(function () {
+                console.log("Products removed from cart:", productsDetails.map(product => product.uniqueId));
+                resolve(); // Resolve the promise if operation is successful
+              })
+              .catch(function (error) {
+                console.error("Error removing products from cart: ", error);
+                reject(error); // Reject the promise if there is an error
+              });
+          } else {
+            console.log("User document not found.");
+            reject("User document not found."); // Reject the promise if user document is not found
+          }
+        }).catch(function (error) {
+          console.error("Error getting user document:", error);
+          reject(error); // Reject the promise if there is an error getting the user document
+        });
+      });
+    }
+
+// Function to update the wishlist count
+function updateWishlistCount() {
+      var wishlistCountElement = document.getElementById('wishlistCount');
+      if (wishlistCountElement) {
+        wishlistCountElement.textContent = userData.wishlist ? userData.wishlist.length : 0;
+      }
+
+      var wishlistCountMobileElement = document.getElementById('wishlistCountMobile');
+      if (wishlistCountMobileElement) {
+        wishlistCountMobileElement.textContent = userData.wishlist ? userData.wishlist.length : 0;
+      }
+    }
+
+    // Function to update the cart count
+    function updateCartCount() {
+      var cartCountElement = document.getElementById('cartCount');
+      if (cartCountElement) {
+        cartCountElement.textContent = userData.cart ? userData.cart.length : 0;
+      }
+
+      var cartCountMobileElement = document.getElementById('cartCountMobile');
+      if (cartCountMobileElement) {
+        cartCountMobileElement.textContent = userData.cart ? userData.cart.length : 0;
+      }
+    }
+
+    document.getElementById('accountIcon').addEventListener('click', function () {
+      document.querySelector('.dropdown-account').classList.toggle('show');
+    });
+
+    document.getElementById('wishlistIcon').addEventListener('click', function () {
+      window.location.href = 'shop-wishlist.html';
+    });
+
+    document.getElementById('cartIcon').addEventListener('click', function () {
+      window.location.href = 'shop-cart.html';
+    });
+
+    function handleUserClick(userChoise) {
+      $('#welcomeModal').modal('hide');
+
+      if (userChoise === 'customer') {
+        window.location.href = 'page-login.html';
+      } else {
+        window.location.href = 'page-wholesaler-register.html';
+      }
+    }
+
+    // Function to check if a user is logged in
+    function checkUserLoggedIn() {
+      var user = firebase.auth().currentUser;
+      if (user) {
+        console.log("user logged in");
+        return true;
+      } else {
+        console.log("user is not logged in");
+        return false;
+      }
+    }
+
+    // Function to sign out the user
+    function updateSignInOrOut() {
+      var signinLink = document.getElementById("signinLink");
+      var signinLinkMobile = document.getElementById("signinLinkMobile");
+
+      if (checkUserLoggedIn()) {
+        signinLink.querySelector("a").textContent = "Sign out";
+        signinLinkMobile.querySelector("a").textContent = "Sign out";
+      } else {
+        signinLink.querySelector("a").textContent = "Sign in";
+        signinLinkMobile.querySelector("a").textContent = "Sign in";
+      }
+
+    }
+
+    // Function to sign out the user
+    function signOutUser() {
+      firebase.auth().signOut().then(function () {
+        console.log('User signed out successfully');
+        window.location.href = 'index.html';
+      }).catch(function (error) {
+        console.error('Error signing out:', error);
+      });
+    }
+
+    function signInOrOut() {
+      if (checkUserLoggedIn()) {
+        signOutUser();
+      } else {
+        var welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+        welcomeModal.show();
+      }
+    }
+
+    // Function to fetch user data when the authentication state changes
+    function onAuthStateChanged(user) {
+      updateSignInOrOut();
+      if (user) {
+        fetchUserData();
+      } else {
+        console.log("No user is signed in.");
+      }
+    }
+
+    // Add a listener for authentication state changes
+    firebase.auth().onAuthStateChanged(onAuthStateChanged);
+
+    function fetchUserData() {
+      var user = firebase.auth().currentUser;
+
+      if (user) {
+        var userId = user.uid;
+        var userDocRef = firestore.collection("users").doc(userId);
+
+        userDocRef.get().then(function (doc) {
+          if (doc.exists) {
+            // User document found, access user data
+            userData = doc.data();
+            if (doc.data().wholesaleBuyer === true) {
+              var deliveryInfoParagraph = document.getElementById('delivery-info');
+              deliveryInfoParagraph.textContent = 'On all orders';
+            }
+            updateWishlistCount();
+            updateCartCount();
+            populateOrderInfo();
+          } else {
+            // User document not found
+            console.log("No user data found for current user.");
+          }
+        }).catch(function (error) {
+          console.error("Error getting user document:", error);
+        });
+      } else {
+        // No user is signed in
+        console.log("No user is signed in.");
+      }
+    }
+
+    // Function to read all documents from the 'categories' collection and populate the Shop by Categories
+    function popuateShopByCategories() {
+      var menu = document.querySelector('.menu-close');
+      var selectElement = document.querySelector('.select-active');
+
+      firestore.collection("categories").get()
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            // Access the data of each document
+            var data = doc.data();
+            var category = doc.id;
+            var subCategories = data.subCategories || [];
+            var imageUrl = data.imageURL;
+
+            // Create parent list item for category
+            var parentListItem = document.createElement('li');
+            parentListItem.classList.add('has-children');
+
+            // Create link for category
+            var categoryLink = document.createElement('a');
+            categoryLink.href = "javascript:;";
+
+            // Create image element for category
+            var imgLink = document.createElement('span');
+            imgLink.classList.add('img-link');
+            var img = document.createElement('img');
+            img.src = imageUrl;
+            img.alt = category;
+            imgLink.appendChild(img);
+
+            // Create span element for category text
+            var textLink = document.createElement('span');
+            textLink.classList.add('text-link');
+            textLink.textContent = category;
+
+            categoryLink.appendChild(imgLink);
+            categoryLink.appendChild(textLink);
+
+            // Add event listener for category click
+            categoryLink.addEventListener('click', function () {
+              const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent(category) + '&product=' + encodeURIComponent('All');
+              window.location.href = destinationUrl;
+            });
+
+            // Create unordered list for sub-categories
+            var subMenu = document.createElement('ul');
+            subMenu.classList.add('sub-menu');
+
+            // Populate sub-categories
+            subCategories.forEach(subCategory => {
+              var subCategoryItem = document.createElement('li');
+              var subCategoryLink = document.createElement('a');
+              subCategoryLink.href = "#";
+              subCategoryLink.classList.add('product-link');
+              subCategoryLink.textContent = subCategory;
+
+              // Add event listener for sub-category click
+              subCategoryLink.addEventListener('click', function () {
+                const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent(category) + '&product=' + encodeURIComponent(subCategory);
+                window.location.href = destinationUrl;
+              });
+
+              subCategoryItem.appendChild(subCategoryLink);
+              subMenu.appendChild(subCategoryItem);
+            });
+
+
+            // Create an option element for the category
+            var option = document.createElement('option');
+            option.value = category;
+            option.textContent = category;
+
+            // Add event listener for select change
+            selectElement.addEventListener('change', function () {
+              var selectedCategory = selectElement.value;
+              console.log('Selected Category:', selectedCategory);
+            });
+
+            // Append the option to the select element
+            selectElement.appendChild(option)
+
+            // Append category link and sub-menu to parent list item
+            parentListItem.appendChild(categoryLink);
+            parentListItem.appendChild(subMenu);
+
+            // Append parent list item to menu
+            menu.appendChild(parentListItem);
+          });
+        })
+        .catch((error) => {
+          console.error("Error reading documents: ", error);
+        });
+    }
+
+    // Select the input element
+    var inputElement = document.querySelector('.box-keysearch input');
+
+    // Add event listener for keydown event
+    inputElement.addEventListener('keydown', function (event) {
+      // Check if the pressed key is Enter
+      if (event.key === 'Enter') {
+        // Log the input value to the console
+        console.log('Search query:', inputElement.value);
+        const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent('All') + '&product=' + encodeURIComponent('All') + '&searchQuery=' + encodeURIComponent(inputElement.value);
+        window.location.href = destinationUrl;
+      }
+    });
+
+    document.getElementById("searchInput").addEventListener("keydown", function (event) {
+      if (event.keyCode === 13) {
+        var inputValue = this.value;
+        const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent('All') + '&product=' + encodeURIComponent('All') + '&searchQuery=' + encodeURIComponent(inputValue);
+        window.location.href = destinationUrl;
+      }
+    });
+
+    popuateShopByCategories();
+  </script>
+</body>
+
+</html>

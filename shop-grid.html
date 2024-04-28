@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="msapplication-TileColor" content="#0E0E0E">
+  <meta name="template-color" content="#0E0E0E">
+  <meta name="description" content="Index page">
+  <meta name="keywords" content="index, page">
+  <meta name="author" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/template/favicon.svg">
+  <link href="assets/css/style.css?v=3.0.0" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <title>Products - ibest</title>
+</head>
+
+<body>
+  <div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+      <div class="preloader-inner position-relative">
+        <div class="text-center"><img class="mb-10" src="assets/imgs/template/favicon.svg" alt="ibest">
+          <div class="preloader-dots"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topbar top-brand-2">
+    <div class="container-topbar">
+      <div class="menu-topbar-left d-none d-xl-block">
+        <ul class="nav-small">
+          <li><a class="font-xs" href="index.html">Home</a></li>
+          <li><a class="font-xs" href="shop-grid.html">New Arrival</a></li>
+          <li><a class="font-xs" href="page-contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="info-topbar text-center d-none d-xl-block"><span class="font-xs color-brand-3">Free shipping for all
+          orders over</span><span class="font-sm-bold color-success"> R 750.00</span></div>
+      <div class="menu-topbar-right">
+        <div class="dropdown dropdown-language">
+          <button class="btn dropdown-toggle" id="dropdownPage" type="button" data-bs-toggle="dropdown"
+            aria-expanded="true" data-bs-display="static"><span class=" font-xs color-brand-3"><img
+                src="assets/imgs/template/en.svg" alt="ibest"> English </span></button>
+        </div>
+        <div class="dropdown dropdown-language">
+        </div>
+      </div>
+    </div>
+  </div>
+  <header class="header header-container sticky-bar">
+    <div class="container">
+      <div class="main-header">
+        <div class="header-left">
+          <div class="header-logo">
+            <a href="index.html">
+              <img alt="ibest" src="assets/imgs/template/logo.svg">
+            </a>
+          </div>
+          <div class="header-search">
+            <div class="box-header-search">
+              <div class="form-search">
+                <div class="box-category">
+                  <select class="select-active select2-hidden-accessible" data-select2-id="1" tabindex="-1"
+                    aria-hidden="true">
+                    <option value="All">All categories</option>
+                    <!--All categories will show here-->
+                  </select>
+                </div>
+                <div class="box-keysearch">
+                  <input class="form-control font-xs" type="text" value="" placeholder="Search for items">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-nav text-start">
+          </div>
+          <div class="header-shop">
+            <div class="d-inline-block box-dropdown-cart"><span class="font-lg icon-list icon-account"
+                id="accountIcon"><span>Account</span></span>
+              <div class="dropdown-account">
+                <ul>
+                  <li><a href="page-account.html">My Account</a></li>
+                  <li><a href="page-account.html">My Orders</a></li>
+                  <li><a href="shop-wishlist.html">My Wishlist</a></li>
+                  <li><a href="page-account.html">Setting</a></li>
+                  <li id="signinLink"><a href="#" onclick="signInOrOut()"></a></li>
+                </ul>
+              </div>
+            </div><a class="font-lg icon-list icon-wishlist" id="wishlistIcon"><span>Wishlist</span><span
+                class="number-item font-xs" id="wishlistCount">0</span></a>
+            <a class="d-inline-block box-dropdown-cart" id="cartIcon">
+              <span class="font-lg icon-list icon-cart">
+                <span>Cart</span>
+                <span class="number-item font-xs" id="cartCount">0</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+        <div class="dropdown d-inline-block">
+          <button class="btn dropdown-toggle btn-category" id="dropdownCategory" type="button" data-bs-toggle="dropdown"
+            aria-expanded="true" data-bs-display="static"><span class="dropdown-right font-sm-bold color-white">Shop By
+              Categories</span></button>
+          <div class="sidebar-left dropdown-menu dropdown-menu-light" aria-labelledby="dropdownCategory"
+            data-bs-popper="static">
+            <ul class="menu-texts menu-close">
+              <!--Catgories and Sub-categories will show here-->
+            </ul>
+          </div>
+        </div>
+        <div class="mobile-keysearch">
+          <input id="searchInput" class="form-control font-xs" type="text" value="" placeholder="Search">
+        </div>
+        <div class="mobile-icons">
+          <div class="mobile-icon dropdown">
+            <a href="#" class="mobile-icon-link"><img src="assets/imgs/template/account.svg" alt="Account Icon"
+                id="accountIconMobile"></a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="page-account.html">My Account</a></li>
+                <li><a href="page-account.html">My Orders</a></li>
+                <li><a href="shop-wishlist.html">My Wishlist</a></li>
+                <li><a href="page-account.html">Setting</a></li>
+                <li id="signinLinkMobile"><a href="#" onclick="signInOrOut()"></a></li>
+              </ul>
+            </div>
+          </div>
+          <a href="shop-wishlist.html" class="mobile-icon-link"><img src="assets/imgs/template/wishlist.svg"
+              alt="Wishlist Icon"><span class="badge top-right" id="wishlistCountMobile">0</span></a>
+          <a href="shop-cart.html" class="mobile-icon-link"><img src="assets/imgs/template/cart.svg"
+              alt="Cart Icon"><span class="badge top-right" id="cartCountMobile">0</span></a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="section-box">
+
+    </div>
+
+    <div class="section-box shop-template mt-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 order-first order-lg-last">
+            <div class="box-filters mt-0 pb-5 border-bottom">
+              <div class="row">
+                <div class="col-xl-2 col-lg-3 mb-10 text-lg-start web-filter">
+                  <a class="btn btn-filter font-sm color-brand-3 font-medium" onclick="clearFilters()">Clear Filters</a>
+                </div>
+                <!-- Mobile filter buttons -->
+                <div class="row d-lg-none">
+                  <div class="col-6 mb-10">
+                    <a class="btn btn-filter font-sm color-brand-3 font-medium" onclick="clearFilters()">Clear
+                      Filters</a>
+                  </div>
+                  <div class="col-6 mb-10 text-end">
+                    <a class="btn btn-filter-red font-sm color-white font-medium" onclick="scrollToFilters()">Filters</a>
+                  </div>
+                </div>
+                <div class="col-xl-10 col-lg-9 mb-10 text-lg-end text-center">
+                  <span class="font-sm color-gray-900 font-medium border-1-right span" id="resultsMessage">Showing
+                    1&ndash;16 of 17 results</span>
+                  <div class="d-inline-block">
+                    <span class="font-sm color-gray-500 font-medium">Sort by:</span>
+                    <div class="dropdown dropdown-sort">
+                      <button class="btn dropdown-toggle font-sm color-gray-900 font-medium" id="dropdownSort"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">Latest products</button>
+                      <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownSort" style="margin: 0px;">
+                        <li><a class="dropdown-item active" href="#" data-sort-option="latest">Latest products</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort-option="oldest">Oldest products</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort-option="lowToHigh">Low to high</a></li>
+                        <li><a class="dropdown-item" href="#" data-sort-option="highToLow">High to low</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-20" id="productContainer">
+              <div id="productsContainer" class="row">
+              </div>
+            </div>
+            <nav>
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link page-prev" href="#"></a></li>
+                <!--Page number will display here-->
+                <li class="page-item"><a class="page-link page-next" href="#"></a></li>
+              </ul>
+            </nav>
+
+
+            <!--<div class="pagination-area mt-30 mb-50 d-flex justify-content-center">
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-start">
+                  <li class="page-item"><a class="page-link" href="#"><i class="material-icons md-chevron_left"></i></a></li>
+                  Page number will dsiplay here
+                  <li class="page-item"><a class="page-link" href="#"><i class="material-icons md-chevron_right"></i></a></li>
+                </ul>
+              </nav>
+            </div>-->
+            </section>
+          </div>
+          <div class="col-lg-3 order-last order-lg-first" id="filtersSection">
+            <div class="sidebar-border mb-0">
+              <div class="sidebar-head">
+                <h6 class="color-gray-900">Product Categories</h6>
+              </div>
+              <div class="sidebar-content">
+                <ul class="list-nav-arrow">
+                  <!--Categories with counr show here-->
+                </ul>
+              </div>
+            </div>
+            <div class="sidebar-border mb-40">
+              <div class="sidebar-head">
+                <h6 class="color-gray-900">Products Filter</h6>
+              </div>
+              <div class="sidebar-content">
+                <h6 class="color-gray-900 mt-10 mb-10">Price</h6>
+                <div class="box-slider-range mt-20 mb-15">
+                  <!--<div class="row mb-20">
+                    <div class="col-sm-12">
+                      <div id="slider-range"></div>
+                    </div>
+                  </div>-->
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <label class="lb-slider font-sm color-gray-500">Price Range:</label>
+                      <span class="font-sm color-gray-1000" id="price-range-display"> Free - R100</span>
+                    </div>
+                  </div>
+                  <ul class="list-checkbox">
+                    <li>
+                      <label class="cb-container">
+                        <input type="radio" name="price-filter" data-min="0" data-max="100"> <span
+                          class="text-small">Free -
+                          R100</span><span class="checkmark"></span>
+                      </label><span class="number-item">145</span>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="radio" name="price-filter" data-min="100" data-max="200"> <span
+                          class="text-small">R100 -
+                          R200</span><span class="checkmark"></span>
+                      </label><span class="number-item">70</span>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="radio" name="price-filter" data-min="200" data-max="400"> <span
+                          class="text-small">R200 -
+                          R400</span><span class="checkmark"></span>
+                      </label><span class="number-item">80</span>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="radio" name="price-filter" data-min="400" data-max="600"> <span
+                          class="text-small">R400 -
+                          R600</span><span class="checkmark"></span>
+                      </label><span class="number-item">60</span>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="radio" name="price-filter" data-min="600" data-max="800"> <span
+                          class="text-small">R600 -
+                          R800</span><span class="checkmark"></span>
+                      </label><span class="number-item">50</span>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="radio" name="price-filter" data-min="1000" data-max="100000"> <span
+                          class="text-small">Over
+                          R1000</span><span class="checkmark"></span>
+                      </label><span class="number-item">20</span>
+                    </li>
+                  </ul>
+                  <h6 class="color-gray-900 mt-20 mb-10">Color</h6>
+                  <ul class="list-color">
+                    <li><a class="color-red" href="#"></a><span>Red</span></li>
+                    <li><a class="color-green" href="#"></a><span>Green</span></li>
+                    <li><a class="color-blue" href="#"></a><span>Blue</span></li>
+                    <li><a class="color-purple" href="#"></a><span>Purple</span></li>
+                    <li><a class="color-black" href="#"></a><span>Black</span></li>
+                    <li><a class="color-gray" href="#"></a><span>Gray</span></li>
+                    <li><a class="color-pink" href="#"></a><span>Pink</span></li>
+                    <li><a class="color-brown" href="#"></a><span>Brown</span></li>
+                    <li><a class="color-yellow" href="#"></a><span>Yellow</span></li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+            <div class="box-slider-item">
+              <div class="head pb-15 border-brand-2">
+                <h5 class="color-gray-900">Product Tags</h5>
+              </div>
+              <div class="content-slider mb-50" id="tagContainer">
+                <a class="btn btn-border mr-5 active" href="#">No Tags are Avialable for this Category</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section-box mt-90 mb-50">
+        <div class="container custon-margin-section-box">
+          <ul class="list-col-5">
+            <li>
+              <div class="item-list">
+                <div class="icon-left"><img src="assets/imgs/template/delivery.svg" alt="ibest"></div>
+                <div class="info-right">
+                  <h5 class="font-lg-bold color-gray-100">Free Delivery</h5>
+                  <p id="delivery-info" class="font-sm color-gray-500">All orders over R 3000</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-list">
+                <div class="icon-left"><img src="assets/imgs/template/support.svg" alt="ibest"></div>
+                <div class="info-right">
+                  <h5 class="font-lg-bold color-gray-100">Support 24/7</h5>
+                  <p class="font-sm color-gray-500">Shop with an expert</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-list">
+                <div class="icon-left"><img src="assets/imgs/template/voucher.svg" alt="ibest"></div>
+                <div class="info-right">
+                  <h5 class="font-lg-bold color-gray-100">Gift voucher</h5>
+                  <p class="font-sm color-gray-500">Refer a friend</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-list">
+                <div class="icon-left"><img src="assets/imgs/template/return.svg" alt="ibest"></div>
+                <div class="info-right">
+                  <h5 class="font-lg-bold color-gray-100">Return &amp; Refund</h5>
+                  <p class="font-sm color-gray-500">For wrong items only</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-list">
+                <div class="icon-left"><img src="assets/imgs/template/secure.svg" alt="ibest"></div>
+                <div class="info-right">
+                  <h5 class="font-lg-bold color-gray-100">Secure payment</h5>
+                  <p class="font-sm color-gray-500">100% Protected</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-box box-newsletter">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-md-7 col-sm-12">
+              <h3 class="color-white">Subscrible &amp; Get <span class="color-warning">Offers</span></h3>
+              <p class="font-lg color-white">Get E-mail updates about our latest shop and <span
+                  class="font-lg-bold">special offers.</span></p>
+            </div>
+            <div class="col-lg-4 col-md-5 col-sm-12">
+              <div class="box-form-newsletter mt-15">
+                <form class="form-newsletter">
+                  <input class="input-newsletter font-xs" value="" placeholder="Your email Address">
+                  <button class="btn btn-brand-2">Sign Up</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="modal fade" id="ModalFiltersForm" tabindex="-1" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content apply-job-form">
+            <div class="modal-header">
+              <h5 class="modal-title color-gray-1000 filters-icon">Addvance Fillters</h5>
+              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-30">
+              <div class="row">
+                <div class="col-w-1">
+                  <h6 class="color-gray-900 mb-0">Brands</h6>
+                  <ul class="list-checkbox">
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox" checked="checked"><span class="text-small">Apple</span><span
+                          class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Samsung</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Baseus</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Remax</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Handtown</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Elibest</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Razer</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Auto Focus</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Nillkin</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Logitech</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">ChromeBook</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-w-1">
+                  <h6 class="color-gray-900 mb-0">Special offers</h6>
+                  <ul class="list-checkbox">
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">On sale</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox" checked="checked"><span class="text-small">FREE shipping</span><span
+                          class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Big deals</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Shop Mall</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                  </ul>
+                  <h6 class="color-gray-900 mb-0 mt-40">Ready to ship in</h6>
+                  <ul class="list-checkbox">
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">1 business day</span><span
+                          class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox" checked="checked"><span class="text-small">1&ndash;3 business
+                          days</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">in 1 week</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Shipping now</span><span
+                          class="checkmark"></span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-w-1">
+                  <h6 class="color-gray-900 mb-0">Ordering options</h6>
+                  <ul class="list-checkbox">
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Accepts gift cards</span><span
+                          class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Customizable</span><span
+                          class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox" checked="checked"><span class="text-small">Can be
+                          gift-wrapped</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Installment 0%</span><span
+                          class="checkmark"></span>
+                      </label>
+                    </li>
+                  </ul>
+                  <h6 class="color-gray-900 mb-0 mt-40">Rating</h6>
+                  <ul class="list-checkbox">
+                    <li class="mb-5"><a href="#"><img src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><span
+                          class="ml-10 font-xs color-gray-500 d-inline-block align-top">(5 stars)</span></a></li>
+                    <li class="mb-5"><a href="#"><img src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><span
+                          class="ml-10 font-xs color-gray-500 d-inline-block align-top">(4 stars)</span></a></li>
+                    <li class="mb-5"><a href="#"><img src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><span
+                          class="ml-10 font-xs color-gray-500 d-inline-block align-top">(3 stars)</span></a></li>
+                    <li class="mb-5"><a href="#"><img src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><span
+                          class="ml-10 font-xs color-gray-500 d-inline-block align-top">(2 stars)</span></a></li>
+                    <li class="mb-5"><a href="#"><img src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star-gray.svg" alt="ibest"><span
+                          class="ml-10 font-xs color-gray-500 d-inline-block align-top">(1 star)</span></a></li>
+                  </ul>
+                </div>
+                <div class="col-w-2">
+                  <h6 class="color-gray-900 mb-0">Material</h6>
+                  <ul class="list-checkbox">
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Nylon (8)</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Tempered Glass (5)</span><span
+                          class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox" checked="checked"><span class="text-small">Liquid Silicone Rubber
+                          (5)</span><span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="cb-container">
+                        <input type="checkbox"><span class="text-small">Aluminium Alloy (3)</span><span
+                          class="checkmark"></span>
+                      </label>
+                    </li>
+                  </ul>
+                  <h6 class="color-gray-900 mb-20 mt-40">Product tags</h6>
+                  <div>
+                    <a class="btn btn-border mr-5" href="#">Games</a>
+                    <a class="btn btn-border mr-5" href="#">Electronics</a>
+                    <a class="btn btn-border mr-5" href="#">Video</a>
+                    <a class="btn btn-border mr-5" href="#">Cellphone</a>
+                    <a class="btn btn-border mr-5" href="#">Indoor</a>
+                    <a class="btn btn-border mr-5" href="#">VGA Card</a>
+                    <a class="btn btn-border mr-5" href="#">USB</a>
+                    <a class="btn btn-border mr-5" href="#">Lightning</a>
+                    <a class="btn btn-border mr-5" href="#">Camera</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="modal-footer justify-content-start pl-30"><a class="btn btn-buy w-auto" href="#">Apply
+                Fillter</a><a class="btn font-sm-bold color-gray-500" href="#">Reset Fillter</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wholesaler confirmation Modal -->
+      <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header" style="border-bottom: none;">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <h5 class="modal-title" id="welcomeModalLabel">Welcome!</h5>
+              <p style="color: #8C9EC5;">Please select your user type:</p>
+              <div class="mt-3">
+                <button type="button" class="btn btn-primary btn-lg btn-block mb-3"
+                  onclick="handleUserClick('customer')"
+                  style="background-color: #425A8B; color: #ffffff; border-width: 0; width: 72%;">
+                  <strong style="font-weight: bold;">Customer</strong>
+                  <p>If you're an individual looking to purchase products for personal use.</p>
+                </button>
+              </div>
+
+              <div>
+                <button type="button" class="btn btn-primary btn-lg btn-block mb-3"
+                  onclick="handleUserClick('wholesaler')"
+                  style="background-color: #1F2937; color: #ffffff; border-width: 0; width: 72%;">
+                  <strong style="font-weight: bold;">Wholesaler</strong>
+                  <p>If you're a business or entity interested in bulk purchases or wholesale deals.</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="modal fade" id="ModalQuickview" tabindex="-1" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content apply-job-form">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body p-30">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="gallery-image">
+                    <div class="galleries-2">
+                      <div class="detail-gallery">
+                        <div class="product-image-slider-2">
+                          <figure class="border-radius-10"><img src="assets/imgs/page/product/img-gallery-1.jpg"
+                              alt="product image"></figure>
+                          <figure class="border-radius-10"><img src="assets/imgs/page/product/img-gallery-2.jpg"
+                              alt="product image"></figure>
+                          <figure class="border-radius-10"><img src="assets/imgs/page/product/img-gallery-3.jpg"
+                              alt="product image"></figure>
+                          <figure class="border-radius-10"><img src="assets/imgs/page/product/img-gallery-4.jpg"
+                              alt="product image"></figure>
+                          <figure class="border-radius-10"><img src="assets/imgs/page/product/img-gallery-5.jpg"
+                              alt="product image"></figure>
+                          <figure class="border-radius-10"><img src="assets/imgs/page/product/img-gallery-6.jpg"
+                              alt="product image"></figure>
+                          <figure class="border-radius-10"><img src="assets/imgs/page/product/img-gallery-7.jpg"
+                              alt="product image"></figure>
+                        </div>
+                      </div>
+                      <div class="slider-nav-thumbnails-2">
+                        <div>
+                          <div class="item-thumb"><img src="assets/imgs/page/product/img-gallery-1.jpg"
+                              alt="product image"></div>
+                        </div>
+                        <div>
+                          <div class="item-thumb"><img src="assets/imgs/page/product/img-gallery-2.jpg"
+                              alt="product image"></div>
+                        </div>
+                        <div>
+                          <div class="item-thumb"><img src="assets/imgs/page/product/img-gallery-3.jpg"
+                              alt="product image"></div>
+                        </div>
+                        <div>
+                          <div class="item-thumb"><img src="assets/imgs/page/product/img-gallery-4.jpg"
+                              alt="product image"></div>
+                        </div>
+                        <div>
+                          <div class="item-thumb"><img src="assets/imgs/page/product/img-gallery-5.jpg"
+                              alt="product image"></div>
+                        </div>
+                        <div>
+                          <div class="item-thumb"><img src="assets/imgs/page/product/img-gallery-6.jpg"
+                              alt="product image"></div>
+                        </div>
+                        <div>
+                          <div class="item-thumb"><img src="assets/imgs/page/product/img-gallery-7.jpg"
+                              alt="product image"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-tags">
+                    <div class="d-inline-block mr-25"><span
+                        class="font-sm font-medium color-gray-900">Category:</span><a class="link"
+                        href="#">Smartphones</a></div>
+                    <div class="d-inline-block"><span class="font-sm font-medium color-gray-900">Tags:</span><a
+                        class="link" href="#">Blue</a>,<a class="link" href="#">Smartphone</a></div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="product-info">
+                    <h5 class="mb-15">SAMSUNG Galaxy S22 Ultra, 8K Camera & Video, Brightest Display Screen, S Pen Pro
+                    </h5>
+                    <div class="info-by"><span class="bytext color-gray-500 font-xs font-medium">by</span><a
+                        class="byAUthor color-gray-900 font-xs font-medium" href="shop-vendor-list.html"> ibest Tech</a>
+                      <div class="rating d-inline-block"><img src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><img
+                          src="assets/imgs/template/icons/star.svg" alt="ibest"><span
+                          class="font-xs color-gray-500 font-medium"> (65 reviews)</span></div>
+                    </div>
+                    <div class="border-bottom pt-10 mb-20"></div>
+                    <div class="box-product-price">
+                      <h3 class="color-brand-3 price-main d-inline-block mr-10">$2856.3</h3><span
+                        class="color-gray-500 price-line font-xl line-througt">$3225.6</span>
+                    </div>
+                    <div class="product-description mt-10 color-gray-900">
+                      <ul class="list-dot">
+                        <li>8k super steady video</li>
+                        <li>Nightography plus portait mode</li>
+                        <li>50mp photo resolution plus bright display</li>
+                        <li>Adaptive color contrast</li>
+                        <li>premium design & craftmanship</li>
+                        <li>Long lasting battery plus fast charging</li>
+                      </ul>
+                    </div>
+                    <div class="box-product-color mt-10">
+                      <p class="font-sm color-gray-900">Color:<span class="color-brand-2 nameColor">Pink Gold</span></p>
+                      <ul class="list-colors">
+                        <li class="disabled"><img src="assets/imgs/page/product/img-gallery-1.jpg" alt="ibest"
+                            title="Pink"></li>
+                        <li><img src="assets/imgs/page/product/img-gallery-2.jpg" alt="ibest" title="Gold"></li>
+                        <li><img src="assets/imgs/page/product/img-gallery-3.jpg" alt="ibest" title="Pink Gold"></li>
+                        <li><img src="assets/imgs/page/product/img-gallery-4.jpg" alt="ibest" title="Silver"></li>
+                        <li class="active"><img src="assets/imgs/page/product/img-gallery-5.jpg" alt="ibest"
+                            title="Pink Gold"></li>
+                        <li class="disabled"><img src="assets/imgs/page/product/img-gallery-6.jpg" alt="ibest"
+                            title="Black"></li>
+                        <li class="disabled"><img src="assets/imgs/page/product/img-gallery-7.jpg" alt="ibest"
+                            title="Red">
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="box-product-style-size mt-10">
+                      <div class="row">
+                        <div class="col-lg-12 mb-10">
+                          <p class="font-sm color-gray-900">Style:<span class="color-brand-2 nameStyle">S22</span></p>
+                          <ul class="list-styles">
+                            <li class="disabled" title="S22 Ultra">S22 Ultra</li>
+                            <li class="active" title="S22">S22</li>
+                            <li title="S22 + Standing Cover">S22 + Standing Cover</li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-12 mb-10">
+                          <p class="font-sm color-gray-900">Size:<span class="color-brand-2 nameSize">512GB</span></p>
+                          <ul class="list-sizes">
+                            <li class="disabled" title="1GB">1GB</li>
+                            <li class="active" title="512 GB">512 GB</li>
+                            <li title="256 GB">256 GB</li>
+                            <li title="128 GB">128 GB</li>
+                            <li class="disabled" title="64GB">64GB</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="buy-product mt-5">
+                      <p class="font-sm mb-10">Quantity</p>
+                      <div class="box-quantity">
+                        <div class="input-quantity">
+                          <input class="font-xl color-brand-3" type="text" value="1"><span
+                            class="minus-cart"></span><span class="plus-cart"></span>
+                        </div>
+                        <div class="button-buy"><a class="btn btn-cart" href="shop-cart.html">Add to cart</a><a
+                            class="btn btn-buy" href="shop-checkout.html">Buy now</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+  <footer class="footer bg-footer-homepage5">
+    <div class="footer-1">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-3 width-25 mb-30">
+            <h4 class="mb-30 color-gray-1000">Contact Us</h4>
+            <div class="font-md mb-20 color-gray-900"><strong class="font-md-bold">Address:</strong> 63 Victoria Street
+              Durban
+            </div>
+            <div class="font-md mb-20 color-gray-900"><strong class="font-md-bold">Phone:</strong> 071 954 9488
+            </div>
+            <div class="font-md mb-20 color-gray-900"><strong class="font-md-bold">E-mail:</strong> custom</div>
+            <div class="font-md mb-20 color-gray-900"><strong class="font-md-bold">Hours:</strong> 7:30 - 5:50, Mon -
+              Sat</div>
+            <div class="mt-30"><a class="icon-socials icon-facebook" href="#"></a><a class="icon-socials icon-instagram"
+                href="#"></a><a class="icon-socials icon-twitter" href="#"></a><a class="icon-socials icon-linkedin"
+                href="#"></a></div>
+          </div>
+          <div class="col-lg-3 width-16 mb-30">
+            <h4 class="mb-30 color-gray-1000">Company</h4>
+            <ul class="menu-footer">
+              <li><a href="page-about-us.html">About us</a></li>
+              <li><a href="page-404.html">Delivery Information</a></li>
+              <li><a href="page-term-condition.html">Terms &amp; Conditions</a></li>
+              <li><a href="page-contact.html">Contact us</a></li>
+              <li><a href="page-contact.html">Support Center</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 width-16 mb-30">
+            <h4 class="mb-30 color-gray-1000">My account</h4>
+            <ul class="menu-footer">
+              <li><a href="page-account.html">Your account</a></li>
+              <li><a href="page-contact.html">Return center</a></li>
+              <li><a href="page-account.html">Orders</a></li>
+              <li><a href="page-account.html">Support Center</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 width-23">
+            <h4 class="mb-30 color-gray-1000">App &amp; Payment</h4>
+            <div>
+              <p class="font-md color-gray-900">Download our Apps and get extra 15% Discount on your first Order&mldr;!
+              </p>
+              <div class="mt-20"><a class="mr-10" href="#"><img src="assets/imgs/template/appstore.png"
+                    alt="ibest"></a><a href="#"><img src="assets/imgs/template/google-play.png" alt="ibest"></a></div>
+              <p class="font-md color-gray-900 mt-20 mb-10">Secured Payment Gateways</p><img
+                src="assets/imgs/template/payment-method.png" alt="ibest">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-2">
+      <div class="footer-bottom-1">
+        <div class="container">
+          <div class="footer-2-top mb-20"><a href="#"><img alt="ibest" src="assets/imgs/template/logo.svg"></a><a
+              class="font-xs color-gray-1000" href="index.html">ibest.com</a><a class="font-xs color-gray-1000"
+              href="#">Our
+              Partners</a><a class="font-xs color-gray-1000" href="#">Our Bussiness</a></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer-bottom mt-20">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 text-center text-lg-start"><span class="color-gray-900 font-sm">Copyright
+                &copy; 2024 ibest. All rights reserved.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/vendors/modernizr-3.6.0.min.js"></script>
+  <script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/vendors/jquery-migrate-3.3.0.min.js"></script>
+  <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/vendors/waypoints.js"></script>
+  <script src="assets/js/vendors/wow.js"></script>
+  <script src="assets/js/vendors/magnific-popup.js"></script>
+  <script src="assets/js/vendors/perfect-scrollbar.min.js"></script>
+  <script src="assets/js/vendors/select2.min.js"></script>
+  <script src="assets/js/vendors/isotope.js"></script>
+  <script src="assets/js/vendors/scrollup.js"></script>
+  <script src="assets/js/vendors/swiper-bundle.min.js"></script>
+  <script src="assets/js/vendors/noUISlider.js"></script>
+  <script src="assets/js/vendors/slider.js"></script>
+  <!-- Count down-->
+  <script src="assets/js/vendors/counterup.js"></script>
+  <script src="assets/js/vendors/jquery.countdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Count down-->
+  <script src="assets/js/vendors/jquery.elevatezoom.js"></script>
+  <script src="assets/js/vendors/slick.js"></script>
+  <script src="assets/js/main.js?v=3.0.0"></script>
+  <script src="assets/js/shop.js?v=1.2.1"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAKUrhFJiaHhFlqu0w3zKTyhIgXJNIIg68",
+      authDomain: "ibest-ba2cf.firebaseapp.com",
+      projectId: "ibest-ba2cf",
+      storageBucket: "ibest-ba2cf.appspot.com",
+      messagingSenderId: "946876798909",
+      appId: "1:946876798909:web:b40bc879e556a26cafe4d4",
+      measurementId: "G-QYR88B09WG"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    var firestore = firebase.firestore();
+    var auth = firebase.auth();
+    var db = firebase.firestore();
+    var userData = [];
+    var isFetchProduct = false;
+    var categoriesArray = [];
+    var pageType = {};
+    var tagsSet = new Set();
+    var priceRange = [
+      { range: '0-100', count: 0 },
+      { range: '100-200', count: 0 },
+      { range: '200-400', count: 0 },
+      { range: '400-600', count: 0 },
+      { range: '600-800', count: 0 },
+      { range: '1000-100000', count: 0 }
+    ];
+
+    // Function to parse URL parameters
+    function getUrlParams() {
+      const params = {};
+      const queryString = window.location.search.substring(1);
+      const urlParams = new URLSearchParams(queryString);
+      for (const [key, value] of urlParams) {
+        params[key] = value;
+      }
+      return params;
+    }
+
+    // Get the parameter values from the URL
+    const urlParams = getUrlParams();
+    const category = urlParams['category'] ? urlParams['category'] : 'All';
+    const product = urlParams['product'] ? urlParams['product'] : 'All';
+    var searchQuery = urlParams['searchQuery'] ? urlParams['searchQuery'] : 'Null';
+
+    // Display the parameter values
+    if (category && product) {
+      console.log('Selected Category:', category);
+      console.log('Selected Product:', product);
+      console.log('searchQueary:', searchQuery);
+    }
+
+    function setupPagination() {
+      const productsPerPage = 12; // Number of products to display per page
+      const productsContainer = document.getElementById("productsContainer");
+      const totalProducts = productsContainer.children.length;
+
+      // Get the element where the results message will be displayed
+      const resultsMessageElement = document.getElementById('resultsMessage');
+
+      // Update the message content
+      if (productsPerPage > totalProducts && totalProducts != 0) {
+        resultsMessageElement.textContent = `Showing 1–${totalProducts} of ${totalProducts}`;
+      } else if (totalProducts === 0) {
+        resultsMessageElement.textContent = `Showing 0`;
+      } else {
+        resultsMessageElement.textContent = `Showing 1–${productsPerPage} of ${totalProducts}`;
+      }
+
+      // Calculate the total number of pages
+      const totalPages = Math.ceil(totalProducts / productsPerPage);
+
+      // Get the pagination container
+      const paginationContainer = document.querySelector('.pagination');
+
+      // Clear existing pagination links
+      paginationContainer.innerHTML = '';
+
+      // Previous button
+      const prevButton = document.createElement('li');
+      prevButton.classList.add('page-item');
+      const prevLink = document.createElement('a');
+      prevLink.classList.add('page-link', 'page-prev');
+      prevLink.href = '#';
+      prevButton.appendChild(prevLink);
+      paginationContainer.appendChild(prevButton);
+
+      // Generate pagination links
+      for (let i = 1; i <= totalPages; i++) {
+        const pageItem = document.createElement('li');
+        pageItem.classList.add('page-item');
+
+        const pageLink = document.createElement('a');
+        pageLink.classList.add('page-link');
+        pageLink.href = '#';
+        pageLink.textContent = i;
+
+        // Add 'active' class to the first page link
+        if (i === 1) {
+          pageLink.classList.add('active');
+          // Display products for the first page when the page loads
+          displayProductsForPage(1, productsPerPage);
+        }
+
+        pageItem.appendChild(pageLink);
+        paginationContainer.appendChild(pageItem);
+      }
+
+      // Next button
+      const nextButton = document.createElement('li');
+      nextButton.classList.add('page-item');
+      const nextLink = document.createElement('a');
+      nextLink.classList.add('page-link', 'page-next');
+      nextLink.href = '#';
+      nextButton.appendChild(nextLink);
+      paginationContainer.appendChild(nextButton);
+
+      // Add event listeners to pagination links
+      paginationContainer.querySelectorAll('.page-link').forEach(link => {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          if (!this.classList.contains('page-next') && !this.classList.contains('page-prev')) {
+            // Determine the page number clicked
+            const pageNumber = parseInt(this.textContent);
+            // Display products for the clicked page
+            displayProductsForPage(pageNumber, productsPerPage);
+
+            // Remove 'active' class from all links and add it to the clicked link
+            paginationContainer.querySelectorAll('.page-link').forEach(link => {
+              link.classList.remove('active');
+            });
+            this.classList.add('active');
+          }
+        });
+      });
+
+      // Add event listener to previous button
+      prevLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        const currentPageLink = paginationContainer.querySelector('.page-link.active');
+        const currentPage = parseInt(currentPageLink.textContent);
+        if (currentPage > 1) {
+          displayProductsForPage(currentPage - 1, productsPerPage);
+          currentPageLink.classList.remove('active');
+          currentPageLink.parentNode.previousElementSibling.querySelector('.page-link').classList.add('active');
+        }
+      });
+
+      // Add event listener to next button
+      nextLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        const currentPageLink = paginationContainer.querySelector('.page-link.active');
+        const currentPage = parseInt(currentPageLink.textContent);
+        if (currentPage < totalPages) {
+          displayProductsForPage(currentPage + 1, productsPerPage);
+          currentPageLink.classList.remove('active');
+          currentPageLink.parentNode.nextElementSibling.querySelector('.page-link').classList.add('active');
+        }
+      });
+    }
+
+    function displayProductsForPage(pageNumber, productsPerPage) {
+      const productsContainer = document.getElementById("productsContainer");
+      const startIndex = (pageNumber - 1) * productsPerPage;
+      const endIndex = startIndex + productsPerPage;
+
+      // Hide all products
+      Array.from(productsContainer.children).forEach(product => {
+        product.style.display = 'none';
+      });
+
+      // Show products for the current page
+      const productsToShow = Array.from(productsContainer.children).slice(startIndex, endIndex);
+      productsToShow.forEach(product => {
+        product.style.display = 'block';
+      });
+    }
+
+    // Function to read all documents from the 'categories' collection and populate the Shop by Categories
+    function popuateShopByCategories() {
+      var menu = document.querySelector('.menu-close');
+      var selectElement = document.querySelector('.select-active');
+      var listContainer = document.querySelector('.list-nav-arrow');
+
+      firestore.collection("categories").get()
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            // Access the data of each document
+            var data = doc.data();
+            var category = doc.id;
+            var subCategories = data.subCategories || [];
+            var imageUrl = data.imageURL;
+            var categoriesCount = data.ProductsNo || 0;
+
+            categoriesArray.push(category);
+
+            // Create parent list item for category
+            var parentListItem = document.createElement('li');
+            parentListItem.classList.add('has-children');
+
+            // Create link for category
+            var categoryLink = document.createElement('a');
+            categoryLink.href = "javascript:;";
+
+            // Create image element for category
+            var imgLink = document.createElement('span');
+            imgLink.classList.add('img-link');
+            var img = document.createElement('img');
+            img.src = imageUrl;
+            img.alt = category;
+            imgLink.appendChild(img);
+
+            // Create span element for category text
+            var textLink = document.createElement('span');
+            textLink.classList.add('text-link');
+            textLink.textContent = category;
+
+            categoryLink.appendChild(imgLink);
+            categoryLink.appendChild(textLink);
+
+            // Add event listener for category click
+            categoryLink.addEventListener('click', function () {
+              const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent(category) + '&product=' + encodeURIComponent('All');
+              window.location.href = destinationUrl;
+            });
+
+            // Create unordered list for sub-categories
+            var subMenu = document.createElement('ul');
+            subMenu.classList.add('sub-menu');
+
+            // Populate sub-categories
+            subCategories.forEach(subCategory => {
+              var subCategoryItem = document.createElement('li');
+              var subCategoryLink = document.createElement('a');
+              subCategoryLink.href = "#";
+              subCategoryLink.classList.add('product-link');
+              subCategoryLink.textContent = subCategory;
+
+              // Add event listener for sub-category click
+              subCategoryLink.addEventListener('click', function () {
+                const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent(category) + '&product=' + encodeURIComponent(subCategory);
+                window.location.href = destinationUrl;
+              });
+
+              subCategoryItem.appendChild(subCategoryLink);
+              subMenu.appendChild(subCategoryItem);
+            });
+
+
+            // Create an option element for the category
+            var option = document.createElement('option');
+            option.value = category;
+            option.textContent = category;
+
+            // Add event listener for select change
+            selectElement.addEventListener('change', function () {
+              var selectedCategory = selectElement.value;
+              console.log('Selected Category:', selectedCategory);
+            });
+
+
+            // Create list item element
+            var listItem = document.createElement('li');
+            var link = document.createElement('a');
+            link.href = `shop-grid.html?category=${encodeURIComponent(category)}&product=All`;
+            link.textContent = `${category}`;
+            var countSpan = document.createElement('span');
+            countSpan.classList.add('number');
+            countSpan.textContent = `${categoriesCount}`;
+            link.appendChild(countSpan);
+            listItem.appendChild(link);
+
+            // Append list item to the list container
+            listContainer.appendChild(listItem);
+
+            // Append the option to the select element
+            selectElement.appendChild(option)
+
+            // Append category link and sub-menu to parent list item
+            parentListItem.appendChild(categoryLink);
+            parentListItem.appendChild(subMenu);
+
+            // Append parent list item to menu
+            menu.appendChild(parentListItem);
+          });
+        })
+        .catch((error) => {
+          console.error("Error reading documents: ", error);
+        });
+    }
+
+    // Select the input element
+    var inputElement = document.querySelector('.box-keysearch input');
+
+    // Add event listener for keydown event
+    inputElement.addEventListener('keydown', function (event) {
+      // Check if the pressed key is Enter
+      if (event.key === 'Enter') {
+        // Log the input value to the console
+        console.log('Search query:', inputElement.value);
+        const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent('All') + '&product=' + encodeURIComponent('All') + '&searchQuery=' + encodeURIComponent(inputElement.value);
+        window.location.href = destinationUrl;
+      }
+    });
+
+    document.getElementById("searchInput").addEventListener("keydown", function (event) {
+      if (event.keyCode === 13) {
+        var inputValue = this.value;
+        const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent('All') + '&product=' + encodeURIComponent('All') + '&searchQuery=' + encodeURIComponent(inputValue);
+        window.location.href = destinationUrl;
+      }
+    });
+
+
+
+    /*function searchProducts() {
+      // Select the input element
+      var inputElement = document.querySelector('.box-keysearch input');
+
+      searchQuery = inputElement.value;
+
+      var selectedRange = getSelectedPriceRange();
+      if (!selectedRange) {
+        selectedRange = 'Null';
+      }
+
+      var activeOption = document.querySelector('.dropdown-item.active');
+      var sortBy = activeOption.getAttribute('data-sort-option');
+
+      // Call fetchProducts() with the selected color
+      fetchProducts(selectedRange, 'Null', 'Null', sortBy)
+        .then(() => {
+          setupPagination();
+          populateTags(tagsSet);
+          var selectedPriceRange = getSelectedPriceRange();
+          console.log(selectedPriceRange);
+        })
+        .catch((error) => {
+          console.error('Error fetching and displaying products:', error);
+        });
+    }*/
+
+
+    function clearFilters() {
+      const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent(category) + '&product=' + encodeURIComponent(product) + '&searchQuery=' + encodeURIComponent(searchQuery);
+      window.location.href = destinationUrl;
+    }
+
+    function scrollToFilters() {
+      var filtersSection = document.getElementById("filtersSection");
+      filtersSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+
+    async function populateFilters() {
+      var activeOption = document.querySelector('.dropdown-item.active');
+      var sortBy = activeOption.getAttribute('data-sort-option');
+
+      fetchProducts('Null', 'Null', 'Null', sortBy)
+        .then(() => {
+          setupPagination();
+          populateTags(tagsSet);
+          populatePriceRanges(priceRange);
+        })
+        .catch((error) => {
+          console.error('Error fetching and displaying products:', error);
+        });
+
+
+      //event listen for price range clicked
+      document.querySelectorAll('.list-checkbox li input[type="radio"]').forEach(function (radioButton) {
+        radioButton.addEventListener('change', function () {
+          var selectedRange = getSelectedPriceRange();
+
+          var activeOption = document.querySelector('.dropdown-item.active');
+          var sortBy = activeOption.getAttribute('data-sort-option');
+
+          fetchProducts(selectedRange, 'Null', 'Null', sortBy)
+            .then(() => {
+              setupPagination();
+              populateTags(tagsSet);
+              populatePriceRanges(priceRange);
+            })
+            .catch((error) => {
+              console.error('Error fetching and displaying products:', error);
+            });
+        });
+      });
+
+
+
+      //Event listen for color click
+      document.querySelectorAll('.list-color li a').forEach(colorLink => {
+        colorLink.addEventListener('click', function (event) {
+          event.preventDefault();
+          document.querySelectorAll('.list-color li a').forEach(link => {
+            link.classList.remove('active');
+          });
+
+          // Add 'active' class to the clicked color link
+          this.classList.add('active');
+          const color = this.classList[0].replace('color-', '');
+
+          var selectedRange = getSelectedPriceRange();
+          if (!selectedRange) {
+            selectedRange = 'Null';
+          }
+
+          var activeOption = document.querySelector('.dropdown-item.active');
+          var sortBy = activeOption.getAttribute('data-sort-option');
+
+          // Call fetchProducts() with the selected color
+          fetchProducts(selectedRange, color, 'Null', sortBy)
+            .then(() => {
+              setupPagination();
+              populateTags(tagsSet);
+              var selectedPriceRange = getSelectedPriceRange();
+              console.log(selectedPriceRange);
+            })
+            .catch((error) => {
+              console.error('Error fetching and displaying products:', error);
+            });
+        });
+      });
+
+
+      //Event Listener for tag click
+      document.getElementById("tagContainer").addEventListener("click", function (event) {
+        const selecedTag = event.target.textContent;
+
+        // Remove the "active" class from all color list items
+        document.querySelectorAll('.list-color li a').forEach(colorLink => {
+          colorLink.classList.remove('active');
+        });
+
+        var selectedRange = getSelectedPriceRange();
+        if (!selectedRange) {
+          selectedRange = 'Null';
+        }
+
+        var activeOption = document.querySelector('.dropdown-item.active');
+        var sortBy = activeOption.getAttribute('data-sort-option');
+
+        fetchProducts(selectedRange, 'Null', selecedTag, sortBy)
+          .then(() => {
+            setupPagination();
+            populateTags(tagsSet);
+          })
+          .catch((error) => {
+            console.error('Error fetching and displaying products:', error);
+          });
+      });
+
+
+      //event listen sort by
+      $(document).ready(function () {
+        $('.dropdown-menu.dropdown-menu-light a').click(function () {
+          $('.dropdown-menu.dropdown-menu-light a').removeClass('active');
+          $(this).addClass('active');
+          var sortBy = $(this).data('sort-option');
+          $('#dropdownSort').text($(this).text());
+
+          var selectedRange = getSelectedPriceRange();
+          if (!selectedRange) {
+            selectedRange = 'Null';
+          }
+
+          fetchProducts(selectedRange, 'Null', 'Null', sortBy)
+            .then(() => {
+              setupPagination();
+              populateTags(tagsSet);
+            })
+            .catch((error) => {
+              console.error('Error fetching and displaying products:', error);
+            });
+        });
+      });
+
+
+    }
+
+
+
+    function getSelectedPriceRange() {
+      var selectedRange = null;
+      var radioButtons = document.querySelectorAll('.list-checkbox li input[type="radio"]');
+
+      radioButtons.forEach(function (radioButton) {
+        if (radioButton.checked) {
+          var min = parseInt(radioButton.getAttribute('data-min'));
+          var max = parseInt(radioButton.getAttribute('data-max'));
+          selectedRange = { min: min, max: max };
+        }
+      });
+
+      return selectedRange;
+    }
+
+
+    function populateTags(tags) {
+      var tagContainer = document.getElementById("tagContainer");
+      tagContainer.innerHTML = ""; // Clear existing tags
+
+
+      // Add your own tags
+      tags.forEach(function (tag) {
+        var tagElement = document.createElement("a");
+        tagElement.setAttribute("class", "btn btn-border mr-5");
+        //tagElement.setAttribute("href", "#");
+        tagElement.textContent = tag;
+        tagContainer.appendChild(tagElement);
+      });
+    }
+
+
+    // Iterate over priceRange array and populate the count for each range
+    function populatePriceRanges(priceRange) {
+      priceRange.forEach((range, index) => {
+        var listItem = document.querySelectorAll('.list-checkbox li')[index];
+        if (listItem) {
+          var countElement = listItem.querySelector('.number-item');
+          if (countElement) {
+            countElement.textContent = range.count;
+          }
+        }
+      });
+    }
+
+
+    function fetchProducts(selectedRange, selectedColor, selectedTag, sortBy) {
+      return new Promise((resolve, reject) => {
+        console.log("Category:", categoriesArray);
+        console.log("Color:", selectedColor);
+        console.log("Tag:", selectedTag);
+        console.log("Range:", selectedRange);
+        console.log("SortBy:", sortBy);
+        isFetchProduct = true;
+
+        priceRange.forEach(range => {
+          range.count = 0;
+        });
+
+        var selectedCategory = [];
+        if (category === 'All') {
+          selectedCategory = categoriesArray;
+        } else {
+          selectedCategory = [category];
+        }
+
+        var selectedSubCategorie = product;
+        let wholesaler = false;
+
+        console.log("userdata:", userData);
+
+        if (userData.length !== 0) {
+          if (userData.wholesaler === true) {
+            console.log("wholesaler login");
+          } else {
+            console.log("user login");
+          }
+          wholesaler = userData.wholesaleBuyer;
+        } else {
+          console.log("No user login");
+        }
+
+        var productsContainer = document.getElementById("productsContainer");
+        // Clear existing products
+        productsContainer.innerHTML = '';
+        Promise.all(selectedCategory.map(category => {
+          var collectionRef = firestore.collection("products").doc(category).collection(selectedSubCategorie);
+          var query = collectionRef;
+          //console.log("in");
+          // Filters products on oldest, latest, price how to low or low to high 
+          if (sortBy === 'latest') {
+            query = query.orderBy("registeredDate", "desc");
+          } else if (sortBy === 'oldest') {
+            query = query.orderBy("price", "asc");
+          } else if (sortBy === 'lowToHigh') {
+            query = query.orderBy("price", "desc");
+          } else if (sortBy === 'highToLow') {
+            query = query.orderBy("price", "asc");
+          }
+          return query.get().then(function (querySnapshot) {
+            querySnapshot.forEach(function (doc) {
+              var data = doc.data();
+              //console.log("in");
+              //console.log(data);
+              let discountedPrice = data.price * (data.discount / 100);
+              let newPrice = data.price - discountedPrice;
+
+              if ((searchQuery === 'Null' || data.product.toLowerCase().trim().includes(searchQuery.toLowerCase())) &&
+                ((selectedColor === 'Null' && selectedTag === 'Null' && selectedRange == 'Null') ||
+                  ((newPrice >= selectedRange.min && newPrice <= selectedRange.max) && (selectedColor === 'Null' && selectedTag === 'Null')) ||
+                  ((data.colors.some(colorObj => colorObj.color.toLowerCase() === selectedColor.toLowerCase())) && (selectedRange === 'Null' && selectedTag === 'Null')) ||
+                  ((data.tags.some(tag => tag.toLowerCase() === selectedTag.toLowerCase())) && (selectedColor === 'Null' && selectedRange === 'Null')) ||
+                  (((newPrice >= selectedRange.min && newPrice <= selectedRange.max) && (data.colors.some(colorObj => colorObj.color.toLowerCase() === selectedColor.toLowerCase()))) && selectedTag === 'Null') ||
+                  (((newPrice >= selectedRange.min && newPrice <= selectedRange.max) && (data.tags.some(tag => tag.toLowerCase() === selectedTag.toLowerCase()))) && selectedColor === 'Null'))
+              ) {
+                showProduct();
+              }
+              //showProduct();
+
+              function showProduct() {
+                let discountedWholesalePrice = data.wholsalePrice * (data.wholesaleDiscount / 100);
+                let newWholesalePrice = data.wholsalePrice - discountedWholesalePrice;
+
+                if (userData.wishlist) {
+                  var isProductInWishlist = userData.wishlist.some(item => item.productId === doc.id);
+                  var wishlistSVG = isProductInWishlist ? "btn-wishlistIconRed" : "btn-wishlistIcon";
+                } else {
+                  var wishlistSVG = "btn-wishlistIcon";
+                }
+
+                var productHtml = `
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="card-grid-style-3">
+                  <div class="card-grid-inner">
+                    <div class="tools">
+                      <a class="btn btn-wishlist ${wishlistSVG} btn-tooltip mb-10" href="#" aria-label="Add To Wishlist" data-product-id="${doc.id}" data-category="${data.selectedCategory}" data-product="${data.selectedSubCategorie}"></a>
+                    </div>
+                    <div class="image-box">
+                      <span class="label bg-brand-2">-${wholesaler ? data.wholesaleDiscount : data.discount}%</span>
+                      <a href="shop-single-product.html?category=${data.selectedCategory}&product=${data.selectedSubCategorie}&productId=${doc.id}">
+                        <img src="${data.featureImageUrl}" alt="${data.product}">
+                      </a>
+                    </div>
+                    <div class="info-right">
+                      <a class="font-xs color-gray-500">${data.selectedCategory}</a><br>
+                      <a class="color-brand-3 font-sm-bold" href="shop-single-product.html?category=${data.selectedCategory}&product=${data.selectedSubCategorie}&productId=${doc.id}">${data.product}</a>
+                      
+                      <div class="price-info">
+                        <strong class="font-lg-bold color-brand-3 price-main">R ${wholesaler ? Math.floor(newWholesalePrice) : Math.floor(newPrice)}</strong>
+                        <span class="color-gray-500 price-line">R ${wholesaler ? data.wholsalePrice : data.price} </span>
+                      </div>
+                      <div class="mt-20 box-btn-cart">
+                        <a class="btn btn-cart" href="shop-single-product.html?category=${data.selectedCategory}&product=${data.selectedSubCategorie}&productId=${doc.id}">View Details</a>
+                      </div>
+                      <ul class="list-features">
+                        <li>${data.features[0]}</li>
+                        <li>${data.features[1]}</li>
+                        <li>${data.features[2]}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>`;
+
+
+                // Append the product HTML to the container
+                productsContainer.innerHTML += productHtml;
+              }
+              if ((data.colors && data.colors.some(colorObj => colorObj.color.toLowerCase() === selectedColor.toLowerCase())) ||
+                (selectedColor === 'Null' && selectedTag === 'Null')) {
+                var index;
+
+                if (newPrice >= 0 && newPrice < 100) {
+                  index = 0;
+                } else if (newPrice >= 100 && newPrice < 200) {
+                  index = 1;
+                } else if (newPrice >= 200 && newPrice < 400) {
+                  index = 2;
+                } else if (newPrice >= 400 && newPrice < 600) {
+                  index = 3;
+                } else if (newPrice >= 600 && newPrice < 800) {
+                  index = 4;
+                } else if (newPrice >= 1000 && newPrice < 100000) {
+                  index = 5;
+                } else {
+                  // Handle prices outside of defined ranges
+                  console.error('Price is outside of defined ranges:', price);
+                  return; // Skip to next price
+                }
+
+                // Increment the count at the determined index
+                priceRange[index].count++;
+              }
+              if (data.tags) {
+                data.tags.forEach(tag => {
+                  tagsSet.add(tag); // Add tags to the Set to ensure uniqueness
+                });
+              }
+            });
+            // Attach event listener to the "Add to Wishlist" buttons
+            attachWishlistEventListeners();
+            //attachCartEventListeners();
+          });
+        })).then(() => {
+          resolve();
+        }).catch(error => {
+          reject(error);
+        });
+      });
+    }
+
+    // Function to attach event listeners to the "Add to Wishlist" buttons
+    function attachWishlistEventListeners() {
+      var wishlistButtons = document.querySelectorAll('.btn-wishlist');
+      wishlistButtons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+          event.preventDefault(); // Prevent the default action of the button
+
+          // Check if the user is logged in
+          if (checkUserLoggedIn()) {
+            const productId = button.getAttribute('data-product-id');
+            const productCategory = button.getAttribute('data-category');
+            const productSubCategory = button.getAttribute('data-product');
+
+            // Call a function to add the product to the wishlist
+            addToWishlist(productId, productCategory, productSubCategory, button);
+          } else {
+            // User is not logged in, redirect to the login page
+            window.location.href = 'page-login.html';
+          }
+        });
+      });
+    }
+
+    // Function to add a product to the wishlist
+    function addToWishlist(productId, category, product, button) {
+      var user = firebase.auth().currentUser;
+
+      if (user) {
+        var userId = user.uid;
+        console.log("USER ID:", userId);
+        var userDocRef = firestore.collection("users").doc(user.uid);
+
+        // Update the wishlist array in the user's document
+        userDocRef.get().then(function (doc) {
+          if (doc.exists) {
+            var wishlist = doc.data().wishlist || [];
+
+            if (wishlist.some(item => item.productId === productId)) {
+              // Product is already in the wishlist, remove it
+              userDocRef.update({
+                wishlist: firebase.firestore.FieldValue.arrayRemove({
+                  productId: productId,
+                  category: category,
+                  product: product
+                })
+              })
+                .then(function () {
+                  console.log("Product removed from wishlist:", productId);
+                  //alert("Product removed from wishlist");
+                  showAlert("Product removed from Wishlist");
+                  button.classList.remove('btn-wishlistIconRed');
+                  button.classList.add('btn-wishlistIcon');
+                  fetchUserData();
+                })
+                .catch(function (error) {
+                  console.error("Error removing product from wishlist: ", error);
+                });
+            } else {
+              // Product is not in the wishlist, add it
+              userDocRef.update({
+                wishlist: firebase.firestore.FieldValue.arrayUnion({
+                  productId: productId,
+                  category: category,
+                  product: product
+                })
+              })
+                .then(function () {
+                  console.log("Product added to wishlist:", productId);
+                  //alert("Product added to wishlist");
+                  showAlert("Product added to Wishlist");
+                  button.classList.add('btn-wishlistIconRed');
+                  button.classList.add('btn-wishlistIcon');
+                  fetchUserData();
+                })
+                .catch(function (error) {
+                  console.error("Error adding product to wishlist: ", error);
+                });
+            }
+          } else {
+            console.log("User document not found.");
+          }
+        }).catch(function (error) {
+          console.error("Error getting user document:", error);
+        });
+      } else {
+        // No user is signed in
+        console.log("No user is signed in.");
+      }
+    }
+
+    function showAlert(text) {
+      Swal.fire({
+        title: text,
+        showClass: {
+          popup: `
+            animate__animated
+            animate__fadeInUp
+            animate__faster
+          `
+        },
+        hideClass: {
+          popup: `
+            animate__animated
+            animate__fadeOutDown
+            animate__faster
+          `
+        },
+        confirmButtonColor: '#BF141F',
+        customClass: {
+          title: 'alertClass',
+          popup: 'alertClassPopup'
+        }
+      });
+    }
+
+    // Function to update the wishlist count
+    function updateWishlistCount() {
+      var wishlistCountElement = document.getElementById('wishlistCount');
+      if (wishlistCountElement) {
+        wishlistCountElement.textContent = userData.wishlist ? userData.wishlist.length : 0;
+      }
+
+      var wishlistCountMobileElement = document.getElementById('wishlistCountMobile');
+      if (wishlistCountMobileElement) {
+        wishlistCountMobileElement.textContent = userData.wishlist ? userData.wishlist.length : 0;
+      }
+    }
+
+    // Function to update the cart count
+    function updateCartCount() {
+      var cartCountElement = document.getElementById('cartCount');
+      if (cartCountElement) {
+        cartCountElement.textContent = userData.cart ? userData.cart.length : 0;
+      }
+
+      var cartCountMobileElement = document.getElementById('cartCountMobile');
+      if (cartCountMobileElement) {
+        cartCountMobileElement.textContent = userData.cart ? userData.cart.length : 0;
+      }
+    }
+
+    document.getElementById('accountIcon').addEventListener('click', function () {
+      document.querySelector('.dropdown-account').classList.toggle('show');
+    });
+
+    document.getElementById('wishlistIcon').addEventListener('click', function () {
+      window.location.href = 'shop-wishlist.html';
+    });
+
+    document.getElementById('cartIcon').addEventListener('click', function () {
+      window.location.href = 'shop-cart.html';
+    });
+
+    function handleUserClick(userChoise) {
+      $('#welcomeModal').modal('hide');
+
+      if (userChoise === 'customer') {
+        window.location.href = 'page-login.html';
+      } else {
+        window.location.href = 'page-wholesaler-register.html';
+      }
+    }
+
+    // Function to check if a user is logged in
+    function checkUserLoggedIn() {
+      var user = firebase.auth().currentUser;
+      if (user) {
+        console.log("user logged in");
+        return true;
+      } else {
+        console.log("user is not logged in");
+        return false;
+      }
+    }
+
+    // Function to sign out the user
+    function updateSignInOrOut() {
+      var signinLink = document.getElementById("signinLink");
+      var signinLinkMobile = document.getElementById("signinLinkMobile");
+
+      if (checkUserLoggedIn()) {
+        signinLink.querySelector("a").textContent = "Sign out";
+        signinLinkMobile.querySelector("a").textContent = "Sign out";
+      } else {
+        signinLink.querySelector("a").textContent = "Sign in";
+        signinLinkMobile.querySelector("a").textContent = "Sign in";
+      }
+
+    }
+
+    // Function to sign out the user
+    function signOutUser() {
+      firebase.auth().signOut().then(function () {
+        console.log('User signed out successfully');
+        window.location.href = 'index.html';
+      }).catch(function (error) {
+        console.error('Error signing out:', error);
+      });
+    }
+
+    function signInOrOut() {
+      if (checkUserLoggedIn()) {
+        signOutUser();
+      } else {
+        var welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+        welcomeModal.show();
+      }
+    }
+
+    // Function to fetch user data when the authentication state changes
+    function onAuthStateChanged(user) {
+      updateSignInOrOut();
+      if (user) {
+        fetchUserData();
+      } else {
+        console.log("No user is signed in.");
+        populateFilters();
+      }
+    }
+
+    // Add a listener for authentication state changes
+    firebase.auth().onAuthStateChanged(onAuthStateChanged);
+
+    function fetchUserData() {
+      var user = firebase.auth().currentUser;
+
+      if (user) {
+        var userId = user.uid;
+        var userDocRef = firestore.collection("users").doc(userId);
+
+        userDocRef.get().then(function (doc) {
+          if (doc.exists) {
+            // User document found, access user data
+            userData = doc.data();
+            if (doc.data().wholesaleBuyer === true) {
+              var deliveryInfoParagraph = document.getElementById('delivery-info');
+              deliveryInfoParagraph.textContent = 'On all orders';
+            }
+            if (!isFetchProduct) {
+              populateFilters();
+            }
+            updateWishlistCount();
+            updateCartCount();
+          } else {
+            // User document not found
+            console.log("No user data found for current user.");
+          }
+        }).catch(function (error) {
+          console.error("Error getting user document:", error);
+        });
+      } else {
+        // No user is signed in
+        console.log("No user is signed in.");
+      }
+    }
+
+    popuateShopByCategories();
+
+  </script>
+</body>
+
+</html>
