@@ -161,7 +161,8 @@
                       Filters</a>
                   </div>
                   <div class="col-6 mb-10 text-end">
-                    <a class="btn btn-filter-red font-sm color-white font-medium" onclick="scrollToFilters()">Filters</a>
+                    <a class="btn btn-filter-red font-sm color-white font-medium"
+                      onclick="scrollToFilters()">Filters</a>
                   </div>
                 </div>
                 <div class="col-xl-10 col-lg-9 mb-10 text-lg-end text-center">
@@ -183,8 +184,9 @@
                 </div>
               </div>
             </div>
-            <div class="row mt-20" id="productContainer">
+            <div class="row mt-20 products" id="productContainer">
               <div id="productsContainer" class="row">
+
               </div>
             </div>
             <nav>
@@ -914,7 +916,7 @@
     var db = firebase.firestore();
     var userData = [];
     var isFetchProduct = false;
-    var categoriesArray = [];
+    const categoriesArray = [];
     var pageType = {};
     var tagsSet = new Set();
     var priceRange = [
@@ -1078,115 +1080,119 @@
 
     // Function to read all documents from the 'categories' collection and populate the Shop by Categories
     function popuateShopByCategories() {
-      var menu = document.querySelector('.menu-close');
-      var selectElement = document.querySelector('.select-active');
-      var listContainer = document.querySelector('.list-nav-arrow');
+      return new Promise((resolve, reject) => {
+        var menu = document.querySelector('.menu-close');
+        var selectElement = document.querySelector('.select-active');
+        var listContainer = document.querySelector('.list-nav-arrow');
 
-      firestore.collection("categories").get()
-        .then((querySnapshot) => {
-          querySnapshot.forEach((doc) => {
-            // Access the data of each document
-            var data = doc.data();
-            var category = doc.id;
-            var subCategories = data.subCategories || [];
-            var imageUrl = data.imageURL;
-            var categoriesCount = data.ProductsNo || 0;
+        firestore.collection("categories").get()
+          .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+              // Access the data of each document
+              var data = doc.data();
+              var category = doc.id;
+              var subCategories = data.subCategories || [];
+              var imageUrl = data.imageURL;
+              var categoriesCount = data.ProductsNo || 0;
 
-            categoriesArray.push(category);
+              categoriesArray.push(category);
 
-            // Create parent list item for category
-            var parentListItem = document.createElement('li');
-            parentListItem.classList.add('has-children');
+              // Create parent list item for category
+              var parentListItem = document.createElement('li');
+              parentListItem.classList.add('has-children');
 
-            // Create link for category
-            var categoryLink = document.createElement('a');
-            categoryLink.href = "javascript:;";
+              // Create link for category
+              var categoryLink = document.createElement('a');
+              categoryLink.href = "javascript:;";
 
-            // Create image element for category
-            var imgLink = document.createElement('span');
-            imgLink.classList.add('img-link');
-            var img = document.createElement('img');
-            img.src = imageUrl;
-            img.alt = category;
-            imgLink.appendChild(img);
+              // Create image element for category
+              var imgLink = document.createElement('span');
+              imgLink.classList.add('img-link');
+              var img = document.createElement('img');
+              img.src = imageUrl;
+              img.alt = category;
+              imgLink.appendChild(img);
 
-            // Create span element for category text
-            var textLink = document.createElement('span');
-            textLink.classList.add('text-link');
-            textLink.textContent = category;
+              // Create span element for category text
+              var textLink = document.createElement('span');
+              textLink.classList.add('text-link');
+              textLink.textContent = category;
 
-            categoryLink.appendChild(imgLink);
-            categoryLink.appendChild(textLink);
+              categoryLink.appendChild(imgLink);
+              categoryLink.appendChild(textLink);
 
-            // Add event listener for category click
-            categoryLink.addEventListener('click', function () {
-              const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent(category) + '&product=' + encodeURIComponent('All');
-              window.location.href = destinationUrl;
-            });
-
-            // Create unordered list for sub-categories
-            var subMenu = document.createElement('ul');
-            subMenu.classList.add('sub-menu');
-
-            // Populate sub-categories
-            subCategories.forEach(subCategory => {
-              var subCategoryItem = document.createElement('li');
-              var subCategoryLink = document.createElement('a');
-              subCategoryLink.href = "#";
-              subCategoryLink.classList.add('product-link');
-              subCategoryLink.textContent = subCategory;
-
-              // Add event listener for sub-category click
-              subCategoryLink.addEventListener('click', function () {
-                const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent(category) + '&product=' + encodeURIComponent(subCategory);
+              // Add event listener for category click
+              categoryLink.addEventListener('click', function () {
+                const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent(category) + '&product=' + encodeURIComponent('All');
                 window.location.href = destinationUrl;
               });
 
-              subCategoryItem.appendChild(subCategoryLink);
-              subMenu.appendChild(subCategoryItem);
+              // Create unordered list for sub-categories
+              var subMenu = document.createElement('ul');
+              subMenu.classList.add('sub-menu');
+
+              // Populate sub-categories
+              subCategories.forEach(subCategory => {
+                var subCategoryItem = document.createElement('li');
+                var subCategoryLink = document.createElement('a');
+                subCategoryLink.href = "#";
+                subCategoryLink.classList.add('product-link');
+                subCategoryLink.textContent = subCategory;
+
+                // Add event listener for sub-category click
+                subCategoryLink.addEventListener('click', function () {
+                  const destinationUrl = 'shop-grid.html?category=' + encodeURIComponent(category) + '&product=' + encodeURIComponent(subCategory);
+                  window.location.href = destinationUrl;
+                });
+
+                subCategoryItem.appendChild(subCategoryLink);
+                subMenu.appendChild(subCategoryItem);
+              });
+
+
+              // Create an option element for the category
+              var option = document.createElement('option');
+              option.value = category;
+              option.textContent = category;
+
+              // Add event listener for select change
+              selectElement.addEventListener('change', function () {
+                var selectedCategory = selectElement.value;
+                console.log('Selected Category:', selectedCategory);
+              });
+
+
+              // Create list item element
+              var listItem = document.createElement('li');
+              var link = document.createElement('a');
+              link.href = `shop-grid.html?category=${encodeURIComponent(category)}&product=All`;
+              link.textContent = `${category}`;
+              var countSpan = document.createElement('span');
+              countSpan.classList.add('number');
+              countSpan.textContent = `${categoriesCount}`;
+              link.appendChild(countSpan);
+              listItem.appendChild(link);
+
+              // Append list item to the list container
+              listContainer.appendChild(listItem);
+
+              // Append the option to the select element
+              selectElement.appendChild(option)
+
+              // Append category link and sub-menu to parent list item
+              parentListItem.appendChild(categoryLink);
+              parentListItem.appendChild(subMenu);
+
+              // Append parent list item to menu
+              menu.appendChild(parentListItem);
+              resolve();
             });
-
-
-            // Create an option element for the category
-            var option = document.createElement('option');
-            option.value = category;
-            option.textContent = category;
-
-            // Add event listener for select change
-            selectElement.addEventListener('change', function () {
-              var selectedCategory = selectElement.value;
-              console.log('Selected Category:', selectedCategory);
-            });
-
-
-            // Create list item element
-            var listItem = document.createElement('li');
-            var link = document.createElement('a');
-            link.href = `shop-grid.html?category=${encodeURIComponent(category)}&product=All`;
-            link.textContent = `${category}`;
-            var countSpan = document.createElement('span');
-            countSpan.classList.add('number');
-            countSpan.textContent = `${categoriesCount}`;
-            link.appendChild(countSpan);
-            listItem.appendChild(link);
-
-            // Append list item to the list container
-            listContainer.appendChild(listItem);
-
-            // Append the option to the select element
-            selectElement.appendChild(option)
-
-            // Append category link and sub-menu to parent list item
-            parentListItem.appendChild(categoryLink);
-            parentListItem.appendChild(subMenu);
-
-            // Append parent list item to menu
-            menu.appendChild(parentListItem);
+          })
+          .catch((error) => {
+            console.error("Error reading documents: ", error);
+            reject(error);
           });
-        })
-        .catch((error) => {
-          console.error("Error reading documents: ", error);
-        });
+      });
     }
 
     // Select the input element
@@ -1440,11 +1446,10 @@
           range.count = 0;
         });
 
-        var selectedCategory = [];
         if (category === 'All') {
-          selectedCategory = categoriesArray;
+          var selectedCategory = categoriesArray;
         } else {
-          selectedCategory = [category];
+          var selectedCategory = [category];
         }
 
         var selectedSubCategorie = product;
@@ -1464,12 +1469,12 @@
         }
 
         var productsContainer = document.getElementById("productsContainer");
-        // Clear existing products
         productsContainer.innerHTML = '';
+
         Promise.all(selectedCategory.map(category => {
           var collectionRef = firestore.collection("products").doc(category).collection(selectedSubCategorie);
           var query = collectionRef;
-          //console.log("in");
+
           // Filters products on oldest, latest, price how to low or low to high 
           if (sortBy === 'latest') {
             query = query.orderBy("registeredDate", "desc");
@@ -1498,7 +1503,6 @@
               ) {
                 showProduct();
               }
-              //showProduct();
 
               function showProduct() {
                 let discountedWholesalePrice = data.wholsalePrice * (data.wholesaleDiscount / 100);
@@ -1582,7 +1586,6 @@
             });
             // Attach event listener to the "Add to Wishlist" buttons
             attachWishlistEventListeners();
-            //attachCartEventListeners();
           });
         })).then(() => {
           resolve();
@@ -1608,8 +1611,8 @@
             // Call a function to add the product to the wishlist
             addToWishlist(productId, productCategory, productSubCategory, button);
           } else {
-            // User is not logged in, redirect to the login page
-            window.location.href = 'page-login.html';
+            var welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+            welcomeModal.show();
           }
         });
       });
@@ -1808,7 +1811,13 @@
         fetchUserData();
       } else {
         console.log("No user is signed in.");
-        populateFilters();
+        popuateShopByCategories()
+          .then(() => {
+            populateFilters();
+          })
+          .catch(error => {
+            console.error("Error populating categories:", error);
+          });
       }
     }
 
@@ -1831,7 +1840,13 @@
               deliveryInfoParagraph.textContent = 'On all orders';
             }
             if (!isFetchProduct) {
-              populateFilters();
+              popuateShopByCategories()
+                .then(() => {
+                  populateFilters();
+                })
+                .catch(error => {
+                  console.error("Error populating categories:", error);
+                });
             }
             updateWishlistCount();
             updateCartCount();
@@ -1847,8 +1862,6 @@
         console.log("No user is signed in.");
       }
     }
-
-    popuateShopByCategories();
 
   </script>
 </body>
