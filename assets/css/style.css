@@ -2184,6 +2184,10 @@ a.text-brand-3:hover {
   transform: translate3d(0, 0, 0);
 }
 
+.products{
+  justify-content: center;
+}
+
 /* Slider size and handle placement;
  */
 .noUi-horizontal {
