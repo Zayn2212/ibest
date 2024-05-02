@@ -4,7 +4,7 @@
     $(window).on("load", function () {
         setTimeout(function () {
             $("#preloader-active").fadeOut("slow");
-        }, 3000); // 5000 milliseconds = 5 seconds
+        }, 1000); // 5000 milliseconds = 5 seconds
     });
 
     /*-----------------
