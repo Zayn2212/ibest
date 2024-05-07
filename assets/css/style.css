@@ -2184,7 +2184,7 @@ a.text-brand-3:hover {
   transform: translate3d(0, 0, 0);
 }
 
-.products{
+.products {
   justify-content: center;
 }
 
@@ -3741,25 +3741,28 @@ a.text-brand-3:hover {
 
 @media (min-width: 768px) {
   .mobile-keysearch {
-    display: none; /* Hide for screens larger than 768px */
+    display: none;
+    /* Hide for screens larger than 768px */
   }
 
-  .mobile-icons{
+  .mobile-icons {
+    display: none;
+  }
+
+  .bottom-nav {
     display: none;
   }
 
 }
 
 @media (max-width: 991px) {
-  .web-filter{
+  .web-filter {
     display: none;
   }
 
 }
 
 @media (max-width: 767px) {
-
-
   .mobile-keysearch {
     flex-grow: 1;
     display: flex;
@@ -3767,9 +3770,10 @@ a.text-brand-3:hover {
     margin-left: 20px;
     margin-right: 10px;
   }
+
   .mobile-search-input {
     width: 100%;
-  } 
+  }
 
 
   .mobile-icons {
@@ -3777,80 +3781,254 @@ a.text-brand-3:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0; /* Add some padding for spacing */
+    padding: 10px 0;
+    /* Add some padding for spacing */
   }
-  
+
   .mobile-icon-link {
-    color: #333; /* Icon color */
-    text-decoration: none; /* Remove underline */
-    font-size: 14px; /* Icon text size */
+    color: #333;
+    /* Icon color */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 14px;
+    /* Icon text size */
     display: flex;
     align-items: center;
     margin-right: 10px;
     position: relative;
   }
-  
+
   .mobile-icon {
     position: relative;
   }
-  
+
   .mobile-icon-link img {
-    width: 24px; /* Adjust the width of the icon */
-    height: 24px; /* Adjust the height of the icon */
-    margin-right: 5px; /* Add some space between the icon and the text */
+    width: 24px;
+    /* Adjust the width of the icon */
+    height: 24px;
+    /* Adjust the height of the icon */
+    margin-right: 5px;
+    /* Add some space between the icon and the text */
   }
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #fff; /* Background color of the dropdown */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add shadow for a dropdown effect */
-    border-radius: 4px; /* Add border radius for rounded corners */
-    z-index: 1000; /* Ensure the dropdown appears above other content */
-    width: 200px; /* Set the width of the dropdown */
+    background-color: #fff;
+    /* Background color of the dropdown */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add shadow for a dropdown effect */
+    border-radius: 4px;
+    /* Add border radius for rounded corners */
+    z-index: 1000;
+    /* Ensure the dropdown appears above other content */
+    width: 200px;
+    /* Set the width of the dropdown */
   }
-  
+
   .dropdown-content ul {
-    list-style-type: none; /* Remove bullet points from the list */
+    list-style-type: none;
+    /* Remove bullet points from the list */
     padding: 0;
     margin: 0;
   }
-  
+
   .dropdown-content li {
-    border-bottom: none; /* Remove bottom border from list items */
+    border-bottom: none;
+    /* Remove bottom border from list items */
   }
-  
+
   .dropdown-content a {
     display: block;
-    padding: 10px 20px; /* Add padding to each item */
-    color: #333; /* Text color */
+    padding: 10px 20px;
+    /* Add padding to each item */
+    color: #333;
+    /* Text color */
     text-decoration: none;
   }
-  
+
   .dropdown-content a:hover {
-    background-color: #f5f5f5; /* Background color on hover */
+    background-color: #f5f5f5;
+    /* Background color on hover */
   }
-  
+
   .mobile-icon:hover .dropdown-content {
     display: block;
   }
-  
+
   .badge {
     background-color: #BF141F;
-    color: white; /* Text color */
-    font-size: 12px; /* Font size */
-    border-radius: 50%; /* Make it a circle */
-    padding: 3px 6px; /* Adjust padding */
-    position: absolute; /* Position it absolutely */
-    top: -8px; /* Adjust vertical position */
-    right: -8px; /* Adjust horizontal position */
+    color: white;
+    /* Text color */
+    font-size: 12px;
+    /* Font size */
+    border-radius: 50%;
+    /* Make it a circle */
+    padding: 3px 6px;
+    /* Adjust padding */
+    position: absolute;
+    /* Position it absolutely */
+    top: -8px;
+    /* Adjust vertical position */
+    right: -8px;
+    /* Adjust horizontal position */
   }
-  
+
   .top-right {
-    top: -8px; /* Adjust vertical position */
-    right: -8px; /* Adjust horizontal position */
+    top: -8px;
+    /* Adjust vertical position */
+    right: -8px;
+    /* Adjust horizontal position */
+  }
+
+
+  .selected-icon {
+    display: none;
+  }
+
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 9999;
+  }
+
+  .nav-link {
+    color: #9CA3AF;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-link:hover {
+    background-color: white;
+  }
+
+  .nav-link.active .selected-icon {
+    display: inline;
+  }
+
+  .nav-link.active .unselected-icon {
+    display: none;
+  }
+
+  .nav-link.active span {
+    color: #BF141F;
   }
 }
+
+.slider-display-mobile {
+  display: none;
+}
+
+
+.container-images {
+  display: flex;
+  flex-direction: row;
+}
+
+.slider-thumbnails {
+  width: 16.2%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-right: 10px;
+  height: 565px;
+}
+
+.slider-thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-image {
+  border: 1px solid #DDE4F0;
+  padding: 13px 7px 13px 7px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  text-align: center;
+  cursor: pointer;
+  max-width: 100px;
+  height: auto;
+}
+
+.slider-image:hover {
+  border-color: #BF141F;
+}
+
+.thumbnails-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-display {
+  flex: 1;
+  padding: 10px;
+  border: 4px solid #DDE4F0;
+  height: 565px;
+  display: flex;
+  align-items: center;
+}
+
+/* Media query for mobile view */
+@media (max-width: 767px) {
+  .container-images {
+    flex-direction: column;
+  }
+
+  .slider-thumbnails {
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin-right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .thumbnails-container {
+    flex-direction: row;
+  }
+
+  .slider-image {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    max-width: 31%;
+  }
+
+  .slider-display-mobile {
+    flex: 1;
+    padding: 10px;
+    border: 4px solid #DDE4F0;
+    height: 565px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .slider-display {
+    display: none;
+  }
+}
+
+
+
+
+/*@media (min-width: 768px) {
+  .container-images {
+    flex-direction: row;
+  }
+  
+  .slider-thumbnails {
+    width: 20%; 
+    overflow-y: auto;
+  }
+}*/
 
 
 .header .nav-main-menu {
@@ -4229,7 +4407,7 @@ a.text-brand-3:hover {
   font-size: 24px;
 }
 
-.alertClassPopup{
+.alertClassPopup {
   border-radius: 20px;
 }
 
@@ -7833,6 +8011,7 @@ a.text-brand-3:hover {
 }
 
 @media screen and (max-width: 767px) {
+
   .bg-footer-homepage5 .footer-1,
   .bg-footer-homepage5 .footer-2 {
     display: none;
@@ -9382,8 +9561,10 @@ a:hover span {
 }
 
 .product-img {
-  width: 100%; /* Adjust width as needed */
-  height: 100%; /* Adjust height as needed */
+  width: 100%;
+  /* Adjust width as needed */
+  height: 100%;
+  /* Adjust height as needed */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -9649,7 +9830,8 @@ a:hover span {
 
 .row-layout {
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center;
+  /* Align items vertically */
 }
 
 .content-wishlist {
@@ -11872,7 +12054,7 @@ a:hover span {
     top: -2px;
   }
 
-  
+
 
   .header-logo {
     margin-left: 36px;
@@ -12440,10 +12622,11 @@ a:hover span {
 
 
 
-.image-row-1{
+.image-row-1 {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  flex-wrap: wrap;
+  /* Allow items to wrap to the next line */
   margin-top: 0px;
   padding: 0px 40px;
   margin-bottom: 45px;
@@ -12453,7 +12636,8 @@ a:hover span {
 .image-row-2 {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  flex-wrap: wrap;
+  /* Allow items to wrap to the next line */
   margin-top: 0px;
   padding: 0px 40px;
   margin-bottom: 45px;
@@ -12461,38 +12645,45 @@ a:hover span {
 
 .image-container {
   text-align: center;
-  margin: 0 auto; /* Center the image container */
-  width: 50%; /* Set width to 50% for two columns on larger screens */
-  box-sizing: border-box; /* Include padding and border in the width */
-  padding: 0px 25px; /* Add some horizontal spacing between columns */
+  margin: 0 auto;
+  /* Center the image container */
+  width: 50%;
+  /* Set width to 50% for two columns on larger screens */
+  box-sizing: border-box;
+  /* Include padding and border in the width */
+  padding: 0px 25px;
+  /* Add some horizontal spacing between columns */
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .image-container {
-    width: 100%; /* Change width to 100% for single column on smaller screens */
+    width: 100%;
+    /* Change width to 100% for single column on smaller screens */
     margin-bottom: 20px;
   }
 
 
-.image-row-1{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  margin-top: 0px;
-  padding: 0px 0px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-}
+  .image-row-1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    margin-top: 0px;
+    padding: 0px 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
 
-.image-row-2 {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  margin-top: 0px;
-  padding: 0px 0px;
-  margin-bottom: 0px;
-}
+  .image-row-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    margin-top: 0px;
+    padding: 0px 0px;
+    margin-bottom: 0px;
+  }
 }
 
 
